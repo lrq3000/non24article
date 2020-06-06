@@ -5,4 +5,4 @@ If you reuse some of my material, please feel free to use it under Creative Comm
 
 I am also open to collaborations.
 
-To view the draft, use this HTML previewer: https://htmlpreview.github.io/?https://github.com/lrq3000/non24article/blob/master/SleepNon24.html
+To view the draft, use this HTML previewer: https://lrq3000.github.io/non24article/SleepNon24.html
