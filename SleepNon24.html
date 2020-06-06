@@ -17,8 +17,8 @@
     
     <!-- !! Different stylesheets for different screen sizes. Adapt to your likening-->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
-    <link rel="stylesheet" media="screen and (min-width: 741px)" href=./resources/style.css>
-    <link rel="stylesheet" media="screen and (max-width: 740px)" href=./resources/style_mobile.css>
+    <link rel="stylesheet" media="screen and (min-width: 741px)" href=./SleepNon24_files/_resources/style.css>
+    <link rel="stylesheet" media="screen and (max-width: 740px)" href=./SleepNon24_files/_resources/style_mobile.css>
 
 </head>
 <body onload="$.mobile.silentScroll(window.scrollY);" <!-- fix for jquery-mobile always scrolling to top at loading, see https://stackoverflow.com/questions/15255719/jquery-mobile-prevent-scroll-to-top-before-page-transition --> > 
@@ -32,7 +32,7 @@
                 <a href="#nav-panel" data-icon="bars">Table of content</a> 
                 
                 <!-- !! Fill in the website title, by default: Notebook -->
-                <h1>Notebook</h1> 
+                <h1>Notebook - SleepNon24</h1> 
                 
                 <!-- !! Optionally, create button with custom link. To apply uncomment the next line and fill in the link (and optionally change the button and text)) -->
                 <!-- <a href="http://my.website.org" data-icon="home">Main website</a> -->
@@ -4676,17 +4676,44 @@ SUMMARY: proteins increases levels of tryptophan and then serotonin, which by it
     var headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6, h7')
     var headingMap = {}
 
+    <!-- generate ids dynamically for each header, that's necessary for tocbot to work, source makeids from tocbot repository -->
     Array.prototype.forEach.call(headings, function (heading) {
-      var id = heading.id ? heading.id : heading.textContent.trim().toLowerCase()
-        .split(' ').join('-').replace(/[!@#$%^&*():]/ig, '')
-      headingMap[id] = !isNaN(headingMap[id]) ? ++headingMap[id] : 0
-      if (headingMap[id]) {
-        heading.id = id + '-' + headingMap[id]
-      } else {
-        heading.id = id
-      }
+        var id = heading.id ? heading.id : heading.textContent.trim().toLowerCase()
+            .split(' ').join('-').replace(/[!@#$%^&*():]/ig, '').replace(/\//ig, '-')
+        headingMap[id] = !isNaN(headingMap[id]) ? ++headingMap[id] : 0
+        if (headingMap[id]) {
+            heading.id = id + '-' + headingMap[id]
+        } else {
+            heading.id = id
+        }
+        // Add a self-referential link on the header's anchor, easier to share + jump to this anchor if clicked
+        heading.innerHTML = "<a href=\"#"+id+"\" onclick=\"jumpToAnchor('"+id+"');\";>"+heading.innerHTML+"</a>"
     })
 
+    function jumpToAnchor(anchorId) {
+    // jump to an anchor
+    // from: https://stackoverflow.com/a/52138511/1121352
+    $(document).ready(function() {
+        // Pure JS solution, that doesn't cause the window to go back to the top before sliding to the anchor
+        const element = document.querySelector('#'+anchorId)
+        const topPos = element.getBoundingClientRect().top + window.pageYOffset
+
+        window.scrollTo({
+            top: topPos, // scroll so that the element is at the top of the view
+            behavior: 'smooth' // smooth scroll
+        })
+        // JQuery solution
+        /*
+        $('html, body').animate({
+            'scrollTop':   $('#'+anchorId).offset().top
+        }, 500);
+        */
+        // Ensure the anchor is added in the URL so the user can more easily copy the link and share from the browser's address bar directly
+        location.hash = "#" + anchorId;
+    });
+    }; // }(JQuery);
+
+    <!-- initialize tocbot with some options -->
     tocbot.init({
       // Where to render the table of contents.
       tocSelector: '.js-toc',

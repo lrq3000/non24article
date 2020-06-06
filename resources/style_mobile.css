@@ -46,18 +46,52 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6, h7 {
+    /* Remove unnecessary margin after headers, but add some before to differenciate between different sections, that's good page style standards (ie, the between-sections blank space must be greater than within-section vertical/interline blank spaces) */
     margin-top: 1.5em;
     margin-bottom: 0;
 }
 
+h1>a, h2>a, h3>a, h4>a, h5>a, h6>a, h7>a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2.0em;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.7em;
+    font-style: italic;
+}
+h4 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+h5, h5 a {
+    font-size: 1.0em;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+h6, h7 {
+    /* Unused, Zim Notes saves h6 and h7 in notes unofficially but doesn't export them and they're not shown in menus nor toc */
+    font-size: 1.0em;
+}
+
 p {
+    /* Avoid the paragraph being to far from its preceding header */
     margin: 0;
     margin-bottom: 1.0em;
+    /* Justify text */
     text-align: justify;
     text-justify: inter-word;
 }
 
 .content li {
+    /* Add some margin between list items, but only in .content, not in .navigation pane */
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
