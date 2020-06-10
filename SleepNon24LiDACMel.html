@@ -1,0 +1,623 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+    <title>SleepNon24LiDACMel</title>
+
+    <meta name="generator" content="Zim Zim 0.67-merge, based on the Ecodiv-responsive template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
+
+    <!-- Scripts -->
+    <script type='text/javascript' src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+    
+    <!-- !! Different stylesheets for different screen sizes. Adapt to your likening-->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+    <link rel="stylesheet" media="screen and (min-width: 741px)" href=./resources/style.css>
+    <link rel="stylesheet" media="screen and (max-width: 740px)" href=./resources/style_mobile.css>
+
+</head>
+<body onload="$.mobile.silentScroll(window.scrollY);" <!-- fix for jquery-mobile always scrolling to top at loading, see https://stackoverflow.com/questions/15255719/jquery-mobile-prevent-scroll-to-top-before-page-transition --> > 
+    
+    <!-- See the Zim help file on templates for options -->    <div class="container">
+        <div data-role="page" class="ui-responsive-panel">
+            
+            <!-- Header / title -->
+    
+            <div data-role="header" data-position="fixed">
+                <a href="#nav-panel" data-icon="bars">Table of content</a> 
+                
+                <!-- !! Fill in the website title, by default: Notebook -->
+                <h1>Notebook - SleepNon24LiDACMel</h1> 
+                
+                <!-- !! Optionally, create button with custom link. To apply uncomment the next line and fill in the link (and optionally change the button and text)) -->
+                <!-- <a href="http://my.website.org" data-icon="home">Main website</a> -->
+                
+            </div>
+            
+            <!-- Warning message if java script is disabled -->
+            <noscript>
+                <div style="border: 1px solid purple; padding: 10px">
+                    <span style="color:red">This page is best viewed with JavaScript enabled!</span>
+                </div>
+            </noscript>
+
+            <!-- Page content -->
+            
+            <div data-role="content" class="content">
+                    <h1>SleepNon24LiDACMel <a name='Perso:MyIssues:SleepNon24:SleepNon24LiDACMel'></a></h1>
+    
+                    <p>
+Créée le samedi 08 février 2020
+</p>
+
+<h2>LiDACMel therapy</h2>
+
+<br>
+
+<h3>Foreword</h3>
+
+<p>
+This is an experimental protocol for entrainment of treatment resistant sighted non24. This will evolve over time, as this protocol is still under experimentations. This was not tested yet on more than one subject.
+</p>
+
+<p>
+Check out later this article for updates, including: whether keto diet is necessary, blue blocker <i>sun</i>glasses, more accurate circadian rhythm estimation using continuous body surface temperature with inexpensive smartwatches.
+</p>
+
+<p>
+For the moment, I advise to skip the therapy section unless you are really curious, and rather go directly to the TROUBLESHOOTING section, which aims to answer the most common questions about the various therapies for non24.
+</p>
+
+<p>
+Also, this therapy was designed for sighted non24. Since the tools influencing the circadian rhythm are the same for all humans (and actually most research was done on typical sleepers but are applicable for people with circadian rhythm disorders), some parts may also be applicable to DSPD with some changes (mostly that the goal of DSPD is to phase advance gradually, whereas non24 aims to freeze the circadian rhythm in place with a treatment-induced daily phase advance that counteracts the natural intrinsic daily phase delay).
+</p>
+
+<h3>Summary</h3>
+
+<p>
+Can be summarized in 3 points:<br>
+<ul>
+<li>light therapy glasses at wake-up (or optimized light angle to stimulate ipRGCs in the nasal retinal hemiregion) - and with an alarm clock at first if necessary or to phase advance</li>
+<li>melatonin instant release and taken at time calculated relatively to DLMO</li>
+<li>reduce/minimize carbohydrates intake, and avoid them after melatonin intake</li>
+</ul>
+</p>
+
+<p>
+<b>DISCLAIMER: I do NOT recommend anyone to try what I did, it is still very experimental and maybe risky</b> and I have yet to confirm whether all the things I did are really necessary or not, and the safety is not guaranteed. If you do try, you do it at your own risks (please ask a physician to follow you at least!).
+</p>
+
+<p>
+TL;DR: I have a non24 circadian rhythm disorder, I followed a combination therapy I designed for 1 month with melatonin in the evening at least 2h before DLMO + light therapy glasses (Luminette v3) at wake-up + time constrained eating of a big meal at around the same time everyday + strict ketogenic diet + 0 calories/carbs past exogenous melatonin time, and this is the result:
+</p>
+
+<p>
+<img src="./SleepNon24LiDACMel_files/pasted_image001.png">
+</p>
+
+<p>
+Before I tried: 1- melatonin only, 2- light therapy lamps + melatonin, 3- strict ketogenic diet only with timed meals (time-restricted feeding), 4- intermittent fasting (or even complete fasting for a few days), 5-carbs-only diet, and of course strict sleep hygiene, but none of those worked.
+</p>
+
+<p>
+My latest protocol, which worked for 2.5 months at the time of this writing, is named <b>LiDACMel</b>, which stands for: Light therapy at wake-up, Dark Therapy in the evening, Avoid Carbs and Melatonin mixup, and take exogenous instant-release Melatonin based on DLMO/core body temperature.
+</p>
+
+<p>
+Here is a quick practical run-down of the procedure for non-24:
+</p>
+
+<p>
+<ul>
+<li>Preparation the week before doing this new therapy:
+<ol type="1" start="1">
+<li>Wait for your sleep to cycle and come close to the ideal time you would like to freeze in-place. Indeed, there is no proven way to cycle backward (ie, wake up earlier and earlier), but if you phase advance enough, you'll eventually reach the wake-up time you would like (this is called a phase delay chronotherapy). Start the next steps when your wake-up time is around 2-4h before the ideal time you would like to wake up.</li>
+<li>sleep according to your own natural rhythm for a week. If necessary, buy an eye mask and ear plugs to prevent external factors from disrupting your sleep. Write down your wake-up time every day in a journal (use Sleepmeter on Android).</li>
+<li>After a week, calculate the average wake-up time over the last 3 days. Subtract the sleep duration you need to feel the most refreshed after sleep (usually 7-8h for adults) + 2 hours from this average wake-up time to compute the DLMO (dim-light melatonin onset). Example: if the average wake-up time over 3 days was 6am, and you need 7h of sleep to feel refreshed, your DLMO is at 6-7-2 = 9pm. Subtract 2-4 hours from this DLMO time to get the ideal time window to take melatonin. Using the previous example, the melatonin intake window would be between 5-7pm.</li>
+</ol></li>
+</ul>
+</p>
+
+<p>
+<ul>
+<li>After the week of natural sleep, use now this combination of therapies everyday:
+<ol type="1" start="1">
+<li><b>Kickstart your melatonin production with a melatonin pill and hence sleep and help its consolidation</b>: take melatonin in instant release form (the dosage is not important, can be as low as <a href="https://academic.oup.com/jcem/article/86/10/4727/2849013" title="0.1mg" class="https">0.1mg</a> or up to <a href="https://academic.oup.com/jcem/article/95/7/3325/2596406" title="3mg" class="https">3mg</a>, but only doses &gt; 1mg can produce hypothermia and hence greater phase advancing effects). What also matters is that it dissolves in sublingual instantly - if you can't find an immediate/fast release melatonin, you can use long/prolonged release melatonin but <a href="https://www.sleephealthfoundation.org.au/melatonin.html" title="crushed" class="https">crushed</a> to <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5108473/" title="avoid the coating (parent compound) from delaying the melatonin intake" class="https">avoid the coating (parent compound) from delaying the melatonin intake</a>) during the ideal melatonin window time you calculated before. Melatonin not only helps with phase advance, but also consolidates the 2nd part of your sleep, so you are more likely to sleep your full night rather than be woken up earlier because of various disturbances.</li>
+<li><b>Prevent light from interfering with melatonin production by using dark therapy blue blocker sunglasses 2-4h before natural bedtime</b>: <a href="https://link.springer.com/article/10.1007/s11818-019-00215-x" title="light can suppress both melatonin and shift the circadian rhythm" class="https">light can suppress both melatonin and shift the circadian rhythm</a> (<a href="https://pubmed.ncbi.nlm.nih.gov/29707782/" title="independently of whether melatonin is suppressed," class="https">independently of whether melatonin is suppressed,</a> see also <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5983144/" title="here" class="https">here</a> and <a href="https://link.springer.com/article/10.1007/s11818-019-00215-x" title="here" class="https">here</a>). Suppressing melatonin by light can reduce the carry-over hangover when taking a supraphysiological dose because of the <a href="https://physoc.onlinelibrary.wiley.com/doi/full/10.1113/jphysiol.2010.201194%20and%20https://onlinelibrary.wiley.com/doi/abs/10.1034/j.1600-079X.2002.01885.x" title="photic history" class="https">photic history</a> and because <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6928018/" title="light eliminates melatonin faster than natural elimination" class="https">light eliminates melatonin faster than natural elimination</a>. Both the <a href="https://www.ncbi.nlm.nih.gov/pubmed/30311830" title="intensity" class="https">intensity</a> and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6926481/" title="color of light" class="https">color of light</a> (see also <a href="https://www.ncbi.nlm.nih.gov/pubmed/25884537/" title="here" class="https">here</a> and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4414925/" title="here" class="https">here</a>) matter in <a href="https://pubmed.ncbi.nlm.nih.gov/29707782/" title="circadian rhythm shifting" class="https">circadian rhythm shifting</a> and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6928018/" title="melatonin suppression" class="https">melatonin suppression</a> by modulating the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2151130/" title="ipRGCs receptors as rods and cones don't matter" class="https">ipRGCs receptors as rods and cones don't matter</a> (see <a href="https://www.nature.com/articles/s41598-019-44035-3" title="here for intensity," class="https">here for intensity,</a> and <a href="https://www.ncbi.nlm.nih.gov/pubmed/30700675" title="here" class="https">here</a> and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6066930/" title="here for color" class="https">here for color</a>), hence you need to avoid bright lights in your biological evening, both by dimming down all lights, and by filtering blue light. A blue blocker sunglasses such as UVEX amber glasses and manually tinted in black is a very easy way to do both without any more hassle. If you don't have access to such glasses, a more inconvenient and less reliable but working alternative is to modify the environment: dim down / switch off all lamps (including your computer screen intensity) and install blue light filters softwares on your computer (advised: LightBulb or f.lux) and smartphone (Twilight on Android). If you have a changing color LED lamp (eg, Living Colors), use it as a bed lamp by setting it to full red color (the blue LED should be switched off if you selected an appropriately full red color). Why start the dark therapy 2-4h before target bedtime? Because melatonin takes 1-2h to produce drowsiness effects from its DLMO point, and it takes 1-2h for melatonin production to reach it's DLMO level from the moment it starts its production (or from when the light inhibition/exposure is stopped). Hence, the dark therapy should be started 2-4h before the natural bedtime. Whereas light therapy phase advances your circadian rhythm (ie, you wake up earlier), dark therapy prevents unwanted phase delays due to light exposure, which concretely makes you feel more fatigued at the wanted time.</li>
+<li><b>Prevent food/glucose from interacting with melatonin</b>: after you take melatonin or when it's too late and you think melatonin is produced by your body, do NOT eat any glucose, and if possible any calories at all. 0% drinks are allowed. Research has shown that glucose is processed worse when melatonin is present in the body, which can lead to metabolic disorders such as obesity and diabetes, and we suspect circadian rhythm disorders. Hence, <a href="https://www.ncbi.nlm.nih.gov/pubmed/26440713" title="it is advised to plan meals at times when melatonin levels are low" class="https">it is advised to plan meals at times when melatonin levels are low</a> (see also <a href="https://www.ncbi.nlm.nih.gov/pubmed/28455106" title="here" class="https">here</a>). This strategy is kind of, but not exactly like, a time-restricted feeding schedule, but instead of restricting by time, you restrict by when you expect melatonin in your body.</li>
+<li><b>Use an eye mask and ear plugs (or a white/pink noise machine) to reduce the highly detrimental effect of noise and disturbances on your sleep efficiency</b>. This is NOT optional, having any disturbance during your sleep will annihilate any effort you can undertake otherwise!</li>
+<li>Mind the ultradian cycles (20 minutes "gates to sleep" every 1h30) and the dopaminergic forbidden zone of sleeping</li>
+<li><b>Use bright light therapy with an angle towards your nose to stop melatonin production and increase vigilance and mood</b>: use light therapy glasses such as Luminette for 1h directly as soon as you wake up. If you have troubles turning on the light because it's too bright and burning your eyes, try first the lowest intensity with your eyes closed for a few minutes. Your eyes will adapt, even if your eyelids are closed. After a few minutes, you should be able to open your eyes. Then progressively ramp up the light intensity to the highest level. If the glasses turn off before 1h, turn them on again to continue. TODO REWRITE: any bright light should be sufficient, even cheap white light neons, but need to target either <a href="https://n.neurology.org/content/76/16/1422" title="the parafoveal or nasal region of the retina" class="https">the parafoveal or nasal region of the retina</a> as these regions much <a href="https://pubmed.ncbi.nlm.nih.gov/10194647/" title="more effectively suppress melatonin" class="https">more effectively suppress melatonin</a>, and to use at wake-up. Bright light therapy is even more important if you use more than 1mg of melatonin (supraphisiological levels), because there will be residually higher levels of melatonin next morning that will cause drowsiness, and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6928018/" title="bright light therapy can forcefully inhibit that" class="https">bright light therapy can forcefully inhibit that</a>. Light is likely the most powerful tool we have to control the circadian rhythm, as it was shown in animals that <a href="https://www.theses.fr/2012STRAJ094" title="light can entrain even without a pacemaker" class="https">light can entrain even without a pacemaker</a>. Light also <a href="https://www.psio.com/pdf/pro/How-to-increase-serotonin-in-the-human-brain.pdf" title="increases serotonin levels and hence vigilance," class="https">increases serotonin levels and hence vigilance,</a> since <a href="https://www.theses.fr/2012STRAJ094" title="light impacts both the circadian rhythm C and the homeostatic (sleep pressure) process S" class="https">light impacts both the circadian rhythm C and the homeostatic (sleep pressure) process S</a> (which makes sense since <a href="https://stm.sciencemag.org/lookup/doi/10.1126/scitranslmed.aba0769" title="cordycepin" class="https">cordycepin</a>, an adenosine analog and adenosine being the biological basis of the homeostatic process S, has a huge impact on the circadian rhythm C, showing that both processes are inter-dependent). Hence, the control of light exposure using a combination of light therapy and dark therapy, through <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4414925/" title="the modulation of both light intensity and color, is an optimized therapy" class="https">the modulation of both light intensity and color, is an optimized therapy</a>. During the rest of the day, after the wake-up light therapy, it is advisable to continue to be exposed to bright light throughout the rest of your natural day, in order to optimize photic history, as it was shown that <a href="https://pubmed.ncbi.nlm.nih.gov/29707782/" title="6h of bright light exposure (whether continuous or intermittent) shifts the circadian phase way more" class="https">6h of bright light exposure (whether continuous or intermittent) shifts the circadian phase way more</a> than only 1h of light exposure, and with continuous light suppressing melatonin more than pulsed light (hence continuous light is likely more efficient to increase vigilance). See also: <a href="https://www.reddit.com/r/DSPD/comments/glhlu8/when_i_go_to_sleep_doesnt_matter/fr74sge?utm_source=share&utm_medium=web2x" title="https://www.reddit.com/r/DSPD/comments/glhlu8/when_i_go_to_sleep_doesnt_matter/fr74sge?utm_source=share&amp;utm_medium=web2x" class="https">https://www.reddit.com/r/DSPD/comments/glhlu8/when_i_go_to_sleep_doesnt_matter/fr74sge?utm_source=share&amp;utm_medium=web2x</a></li>
+<li><b>Follow a strict ketogenic diet with timed big main meal</b>. The effects will start only after you reach the highest 2 levels on the ketostix (measurements of ketosis from urine):
+<ul>
+<li>Timed big meal, which is to take your main meal at the middle of your circadian rythm's day, synchronizes your circadian rhythm thanks to your intestines regulation of the circadian clocks (it's the biggest producer of melatonin). You can eat a breakfast, but it should be relatively small, and there should be only one big meal during the day (eg, the sort of meal that you feel like you ate enough for the whole rest of the day - but be careful of not over-eating!).</li>
+<li>Reduce the quantity of consumed carbohydrates, <a href="https://www.ncbi.nlm.nih.gov/pubmed/26084345/" title="as each 1% reduction improves the metabolism and reduces risks of obesity and metabolic disorders, including sleep" class="https">as each 1% reduction improves the metabolism and reduces risks of obesity and metabolic disorders, including sleep</a>. Following a strict ketogenic diet is kind of the extreme of this strategy, which has the additional advantage of reducing the sleep duration (by one ultradian cycle, so about 1h30-2h) while improving sleep quality (so there is no loss in sleep even if the duration is smaller, which eases the maintenance of a stable sleep), reduce hunger (eases the avoidance of the detrimental melatonin/insulin/carbs interaction in the evening) and increases the time resetting effect of food (by increasing the intestines time clock gene expression and switching off liver's time clock genes and melatonin production - in other words your peripheral circadian clocks will rely more on your food timing, which is a lot easier to control than other zeitgebers). A strict ketogenic diet is a diet with &lt;=50g of wet carbs (sugar+fibers), including &lt;= 20g of sugar carbs per day. This can be tested with a simple urine test using the ketostix. Note that a ketogenic is mostly composed of fat, and only mildly with proteins, do not compensate for the lack of carbs by eating too much proteins, as they will get converted to carbs, preventing you from reaching the highest levels of ketosis as indicated by the last 2 colors on the ketostix. If you choose to do a ketogenic diet, plan to start it ahead, at least 2 weeks before the rest of this protocol, as to have enough time for your sleep to adapt and stabilize with the new diet. Also make sure to use vitamins and minerals complement to avoid the risk of electrolytes insuffisance contributing to the dreaded keto flu. The most effective version of my therapy was with a strict ketogenic diet, so you should probably try that at first and if this works you can then try to transition back to a more complete diet with carbs.</li>
+</ul>
+</li>
+<li>Optional but strongly advised: take multivitamins and minerals, including B12, supplementation every morning. B12 vitamin is known to potentiate the magnitude of the effect of light therapies. Deficiencies in other vitamins and minerals may impact mood (eg, magnesium), neurology (eg, vitamin B6) and the circadian rhythm, so by taking a multivitamins and minerals supplementation you eliminate these potential factors on your sleep easily. Plus, if you do a strict ketogenic diet, this supplementation will help avoid electrolytes imbalance (but you may also need to supplement in salt).</li>
+</ol></li>
+</ul>
+</p>
+
+<p>
+<ul>
+<li>Continue this combination of therapy strictly (respect the hours and use melatonin and light therapy everyday!) for a few weeks. The first week you should see a reduction of your phase delay, and the next week your circadian rhythm (in particular your wake-up time) should be somewhat stable, and it will get more stable along time as you continue with the therapy. The time windows need to be respected, but a slight change of +-30min from day to day is OK in my experience (eg, taking melatonin 30min later or earlier).</li>
+</ul>
+</p>
+
+<p>
+Disclaimer: I thorougly designed and tested this protocol on myself after several failed variations. I do not guarantee that this protocol will work for you, or that all steps are necessary, but I tried to test as many variations as I could by eliminating or changing some steps, and this is the only combination that worked so far, so keep that in mind if you partially try this protocol, if you skip some steps this may reduce the effectiveness (or not work at all). But even if you follow all steps, this may not work for you either. I share this protocol because it should be safe to try and because it was highly effective for me, so I believe it may work for other non24ers with the same etiology (genetic mutation of MT2 receptor?) as I have.
+</p>
+
+<p>
+Note: the 2 optional steps were done in my protocol, but I am not sure they are necessary. The other 4 steps are likely essential.
+</p>
+
+<p>
+Note 2: As you will read below, you will see I initally started this protocol by having another step: to follow a strict ketogenic diet as is done for epilepsy. Although this may have helped to induce the freezing in-place of my circadian rhythm, I could progressively phase it out and switch back to a diet with carbohydrates with my circadian rhythm remaining stable. If you follow the steps above and still find it difficult to maintain a stable rhythm after a few weeks, then you may consider to also switch to a strict ketogenic diet (while still following all of the above).
+</p>
+
+<p>
+Note 3: in addition to B12 supplementation, I took supplementation of a lot of other vitamins and minerals including magnesium (because of deficiencies induced by the strict ketogenic diet). I will later investigate whether these vitamins have a beneficial impact on the therapy, but from the academic literature, there is no evidence apart from B12 effect on the magnitude of the effect of light on the PRC curve.
+</p>
+
+<h3>Long version with details on the protocol I followed and the rationale behind</h3>
+
+<br>
+
+<p>
+As some of you may know, I am currently trying to investigate more thoroughly what's biologically causing the non24 circadian rhythm disorder in people with sight. I am not a specialist, but my background as an (early career) neuroscience researcher certainly helps me in reading the scientific literature.
+</p>
+
+<p>
+I have been diagnosed as a non24 for the first time 10 years ago now. The only thing I knew was that I felt like I was getting sleepy 1 hour later everyday, and that my life was cyclic: I was quite OK for one month, then the next I was a total wreck (missed most of my school classes, had very weird social behavior, difficulties to concentrate, tired all the time and crashing to bed as soon as I got back home after school even if it was early like 5pm, etc). I had melatonin treatment at the time, but it only helped for a short time window (a few weeks), then my cycle started drifting again. I was still healthy at the time so I continued to do my stuff, until recently when my health finally degraded due to chronic sleep deprivation, prompting me to tackle upfront my circadian disorder issue, in the form of academic literature reviewing and monitoring, self-experiments and <a href="https://github.com/lrq3000/non24article" title="a draft of a paper if one of these experiments work" class="https">a draft of a paper if one of these experiments work</a>.
+</p>
+
+<p>
+I recently tried multiple treatments, some advised by physicians, some more experimental:<br>
+<ol type="1" start="1">
+<li>melatonin only,</li>
+<li>light therapy lamp (medical grade, brand Beurer) + dark therapy (blue light filters, blue blocker glasses) + melatonin,</li>
+<li>strict ketogenic diet only (+ dark therapy),</li>
+<li>full carbs diet only (+ dark therapy),</li>
+<li>intermittent fasting (or even complete fasting for a few days), with and without dark therapy,</li>
+<li>time-restricted feeding with big meal timing (with carbs), with and without melatonin.</li>
+<li>serotonin via 5-HTP, either in instant release in the evening to help to sleep, or in long release form in the morning to level up the fluctuation in energy levels.</li>
+</ol>
+</p>
+
+<p>
+But none of those worked (you can see on the sleep log above, I (re-)tested them in the months prior to now, so the months on the left where I mostly free-run were when I tried these treatments, which for some slowed down a bit the delay but did not stop it completely).
+</p>
+
+<p>
+I have attempted another approach, a <b>combination therapy</b> combining multiple zeitgebers (ie, time cue) resets. It's a combination of melatonin, light therapy <b>glasses</b>, strict ketogenic diet, timed big meal and avoiding melatonin/eating mixup (ie, no calories/carbs allowed after taking exogenous melatonin). In other words, a combination of the various things I have tested in the past, but altogether instead of separately. Here are the details of this protocol:
+</p>
+
+<p>
+<ol type="1" start="1">
+<li>Take exogenous melatonin, 1.9mg, in instant release form (dissolves with saliva). Brand is Valdispert Melatonin 1.9mg (package with red bands). The timing of the intake is very critical, I followed the <a href="https://www.ncbi.nlm.nih.gov/pubmed/27542884" title="latest recommendations" class="https">latest recommendations</a> to take 1 pill 2 to 4h before DLMO (the time point at which the body naturally produces endogenous melatonin), which itself is 2h before *natural* bedtime. Since I am non24, my bedtime changes all the time, so it's difficult to estimate the DLMO like that, and in addition some studies show the DLMO can be timed differently in people with circadian rhythm disorders. But the <a href="https://www.ncbi.nlm.nih.gov/pubmed/15600132" title="wake-up time is actually a good predictor" class="https">wake-up time is actually a good predictor</a>, so I calculate DLMO = wake-up time over previous days - sleep duration I need to feel in good shape (6h30-8h on average for adults &lt; 50 years-old). For example, if I woke up around 9h the previous days, my DLMO would be 9-8-2 = 23h. Then my ideal melatonin intake time would be between 19h-21h. Again, although taking melatonin under this time window should always have an effect on the circadian rhythm, the timing in this window matters, taking at 19h will not produce the same effect as taking at 21h or at 20h, there is a precise optimal time point where melatonin will have the greatest effect on you. The most practical way to know is simply to try to take melatonin at different timing, and see at what time you get sleepy the earliest. For me, it was at 20h30 (to wake up at 8-9h in the morning), although initially I started to take it at 19h30, and maybe I will try some other timings in the future to maybe phase advance even more.</li>
+<li>Light therapy glasses directly at wake-up, use the lowest intensity (500 lux is enough) for a full ultradian cycle (~1h30). If you are getting headaches or dizziness feelings, the light intensity may be too high, try a lower intensity. I use Luminette v3, but Luminette v2 should be fine too (do not use v1 as they have only the maximum intensity light, no other level possible). A bright enough neon (500 lux is enough) placed appropriately so that the nasal part of your retina is exposed at wake-up should be enough (TODO add study). (TO REMOVE: You can use another light therapy glass as long as the light has blue light and clinical trials backing up its effectiveness). Do NOT use light therapy lamps, they do not work because they require you to stay very up close for a long time, so it's highly uncomfortable and thus unlikely you will ever properly use them. Light therapy glasses solve this issue with their form factor. In practice, it's difficult to use light therapy glasses directly at wake up, it will blind you and hurt your eyes, but I have found a method: wear the glasses, <b>close your eyes, and light them on</b>, with the lowest intensity first. This should feel very like you are taking a nap under the sun. This will allow your eyes/pupils to adjust to the photic input, even if your eyelids are closed. After one or two minutes, you should be able to gently open your eyes, and then without any issue keep them open while the light is still on. Then, whenever you feel comfortable enough, raise up the light intensity progressively, to level 2, and then after a few more minutes, to level 3 (the maximum level with Luminettes). Then stick with the light therapy until the glasses switch off by themselves (about 20min at maximum intensity, 30min with level 2, 45min with level 1). At this point, you should feel <b>fully awake</b>, if that's not the case, <b>you can switch the glasses back on</b> to continue with a 2nd light therapy session. I often do this, and during the 2nd session I often do the opposite to the 1st one: I restart with the highest intensity first, then progressively as I wake up I turn the intensity lower and lower. With these, you should be fully awake after minimum 20min if 1 session is enough, or max 45min-1 hour if you need 2 sessions.</li>
+<li>Strict ketogenic diet: nothing special here, you can read other guides on how to do such a diet, but note we are here talking about the <b>strict</b> version, which means less than 20g of wet carbs (without fibers) and less than 50g of total carbs (with fibers). The diet must be followed everyday, no "skip day" allowed. I have found that 0% drinks (such as Cola 0% or 0% syrup) are very helpful to quench the need for sugar. You can use ketostix, which are paper bands that get colored with your urine, to measure your degree of ketosis. During the whole month, I was between the highest 2 levels (0.8 g/L to 1.6 g/L). The effects on the circadian rhythm only started after a week after I reached the highest 2 levels on the ketostix, in other words when I was in ketosis. Make sure you do not suffer from electrolytes imbalance by complementing your diet with essential minerals (and vitamins) the first few weeks.</li>
+</ol>
+<img src="./SleepNon24LiDACMel_files/pasted_image.png" width="400"><br>
+<ol type="1" start="4">
+<li>Time-restricted eating with a big meal: the idea is that you take <b>only one big meal at a specific time in your day</b>, about in the middle, so you don't wait too long to eat but in the evening you don't go to sleep to much after to have the time to feel hungry again. For example, for me to sleep between 1h-4h, I ate between 15h30 to 17h30. Now, having only one big meal does NOT mean you can't eat the rest of the time! In the morning, you can perfectly well eat, but in small quantities. However, I have noticed (but maybe wrongly) that eating after the big meal tends to mess up with my sleep, so I rather eat small meals before than after. Also, the meals were all strict ketogenic in my experiment. Concretely in my case, in the morning I could eat small slices of salami or chicken that are usually used with bread but bread is not possible with keto diet so I hate them on their own. Then throughout the day, if I need to get a quick meal on the go, I can eat the same. Then between 15h30 to 17h30 I ate my big meal, which consisted of homemade chicken kebab with tartar sauce (some of them are quite low carb, check the bottle's notice to know if that's the case), cabbage and mushrooms. Then, after this meal, I generally did NOT eat anything, and the few times I did, my sleep was delayed, although I am not sure that's the reason why, but I highly suspect this has an impact. However, 0% drinks are still allowed until you go to sleep, and even after you take melatonin. Also, the time-restricted eating with a big meal may potentially only work with strict ketogenic diets, because with carbohydrate diets, there is a risk of feeling a postprandial sleepiness, which is when the parasympathetic system activates after you eat well and pushes you to sleep (that's why it's nicknamed the "<b>digest and rest</b>" system). In my experience, that's clearly the case, even when eating a big ketogenic diet, I may feel slightly sleepy but never enough for me to actually take a nap, whereas before with a balanced meal I often went to take a nap (or I was a wreck for a few hours until the postprandial sleepiness went away).</li>
+<li>Never eat when you have melatonin in your body, avoiding melatonin/insulin/carbs interaction: after I take the melatonin pill, i do NOT eat anything, nor drink or consume anything that has any calories/carbs in it. I am unsure whether it's the carbs that matter, or any calorie altogether, but in my case, past the melatonin intake time, I only consumed 0% drinks. Also in the morning, I do NOT eat before I use my light therapy glasses (ie, not until I'm sure melatonin was inhibited in my body). Eating while melatonin is still produced in the body is indeed linked with an increase of insulin resistance and the risk of developing metabolic diseases such as diabetes and obesity (and likely Alzheimer). That's the case for just anyone, but it's even worse for people with circadian disorders as they often have a mutation in a melatonin receptor that worsen the detrimental effects of melatonin mixup with carbs. Side note: I hypothesize that the postprandial sleepiness may be worsened in people with the melatonin receptor mutation, because the insulin resistance and glucose profile go up faster in these people.</li>
+<li>Listen to your body's signs of tiredness, and respect your ultradian cycles: TODO see below, also try to match circadian and ultradian cycles peaks.</li>
+</ol>
+</p>
+
+<p>
+Note that the goal of this therapy is not really to make you wake up earlier or at anytime you want, but rather to phase advance the circadian rhythm enough to counterbalance the natural tendency to phase delay and thus <b>freeze your wake up time and bedtime at the current time</b>. So I had to wait until my circadian rhythm was more or less in phase with the time I would prefer (eg, wake up between 6-9am), and then I would start this protocol.
+</p>
+
+<p>
+Ok so now I'm going to dwelve into the rationale behind this therapy, in other words, why and how it may work. Indeed, I already tested separately nearly all of the elements in the combination therapy, but they did not work on their own. Why? There are two possible reasons:<br>
+<ul>
+<li>Either it's simply because I cumulated the phase advance of all these strategies, and so they added up and provided enough phase advance to counter my natural tendency to phase delay because of non-24.</li>
+<li>Or there is a synergistic relationship between some or all of these elements, which allows to produce a "freezing" effect on the circadian rhythm.</li>
+</ul>
+</p>
+
+<p>
+In fact, these two hypotheses are not necessarily exclusive, they can both be true: maybe to stabilize a non24 circadian rhythm to a 24 rhythm, one needs to both phase advance enough AND fulfill certain conditions for this phase advance to be constantly effective. In other words, to both freeze the circadian rhythm and phase advance.
+</p>
+
+<p>
+What could be the basis behind this synergistic effect? Here are some leads from the academic literature:<br>
+<ul>
+<li>Melatonin can be used to trigger melatonin production earlier if taken before the DLMO (ie, before the body produces endogenous melatonin, else if you take after this is useless as the body is already full of melatonin). This is well known in the scientific literature. But lots of people noticed that although they may sleep earlier when taking exogenous melatonin, they will either simply sleep longer and wake up at a later time as if the melatonin did not help at all, or they will wake up but they will feel very sleepy and have great difficulties to feel fully awake. This leads to <b>my current hypothesis: exogenous melatonin can trigger the production of endogenous melatonin, but not reduce its duration, so that melatonin production continues in the morning as usual</b>. In other words, <b>melatonin can only change the bedtime, but not the wake-up time</b>. This also explains why we may wake up earlier but not feeling good at all, because sleeping earlier with exogenous melatonin allows to effectively sleep with enough sleep quality (we predict that there is no change in sleep quality when we take melatonin and wake up earlier), and hence it resets the homeostatic sleep pressure process S (eliminating adenosine), and this is what makes us possibly wake up, but the body is still producing melatonin because the circadian rhythm is NOT synchronized with the melatonin start production time. In other words, <b>starting melatonin production earlier is not enough to change the circadian rhythm</b>. Here is a schema to try to clarify that:</li>
+<li>Light therapy glasses may be the other side of the coin, the much needed complement to melatonin: where melatonin before DLMO kickstarts melatonin production earlier and hence makes you sleep earlier, <b>light therapy glasses are what allow to inhibit/stop melatonin production at wake-up</b>. To complete my hypothesis as outlined in the previous point: <b>to change the circadian rhythm, one must affect both the bedtime AND the wake-up time, otherwise affecting only one of either will fail in changing the circadian rhythm sustainably</b>. Also light therapy glasses must be complemented with <b>dark therapy</b>: in the evening, a few hours before sleeping, avoid bright lamps, or even use red lights, and use blue light filters on your computer (set them to the max reddish coloration!) and also dim the intensity (you can use softwares like Dimmer). I also use blue blocker glasses from UVEX from time to time, but I don't need them so much now that I sleep during the night, I can just switch off the lamps, as these glasses are more useful when you are desynchronized and sleep during the day and you need to block off natural light from delaying further your sleep or messing with your sleep quality by making you sleepless when you should be sleeping.</li>
+<li>The strict ketogenic diet may have a "circadian rhythm freezing effect" as I call it. Why? Because although the suprachiasmatic is the organ that is specializing the most in melatonin production, in fact most of the melatonin is produced by various other organs, and in particular by the liver and the intestines. In addition, we know that the strict ketogenic diet has an effect on sleep in humans, slightly reducing the duration and changing the sleep stages, but with in fact an improvement of sleep quality (while we would expect a decrease given the shorter duration). Finally, it was shown in animals that the strict ketogenic diet has a differential effect on the liver and the gut's clocks (because all organs have their own clocks which contribute to the overall circadian rhythm, and the guts and liver are among the most important since they also regulate body temperature, which is known to be synchronized with the circadian rhythm). More precisely, the strict keto seems to deactive the liver's clock (the liver being a big generator of melatonin and regulated by carbohydrates/insulin, so keto deactivate this way of melatonin production) whereas the gut's clock gene expression is increased (so the circadian rhythm relies more on the gut's clock, and hence on the timing of food intake?).</li>
+<li>This leads us to the timing of food intake: because the strict ketogenic diet may switch off the liver's clock, and make us more reliant on the gut's clock, the timing of food intake may be very important. Scientists know that meal timing can change the circadian rhythm of rats, and the bigger the meal, the more it will synchronize their clock.</li>
+<li>Finally, since it's now known that melatonin has a detrimental interaction with glucose (which is not so strange since we know that liver manages both insulin from glucose levels, and melatonin) that leads to increased insulin resistance and metabolic disorders, and that people with circadian rhythm disorders more frequently have a genetic mutation that makes this detrimental interaction worse, then it only makes sense to assume that this melatonin/glucose interaction can also maybe impact the circadian rhythm. So not only is it safer for health to avoid eating or drinking caloric products when melatonin is still in non-negligible levels in the body, but it may also help with maintaining the circadian rhythm stable.</li>
+</ul>
+</p>
+
+<p>
+In summary: I think the main components that allow my circadian rhythm to be stabilized are the melatonin before DLMO to change the bedtime, light therapy glasses at wake-up to inhibit melatonin, and the diet certainly has a facilitator effect. So I don't think the diet in itself allows me to be stabilized, but it helps me more easily control using melatonin and light therapy. In other words, diet might be a potentiator. But what exactly is doing that in my current diet? This is what I will investigate next, by stopping the ketogenic diet but keeping the other 2 parameters intact (big timed meal + no caloric meals nor drinks after melatonin onset).
+</p>
+
+<p>
+Note that I do not use any other treatment during this month, nor any other compound. For example, coffee. It can be very useful to reduce the sleep pressure (sleep homeostatic process S in Borbély's model of sleep), because it reduces the levels of adenosine, but coffee can NOT do anything to help with the circadian rhythm process C.
+</p>
+
+<p>
+Note also that my circadian rhythm under this combination therapy could sustain unexpected events and changes in my daily routine. Usually, with any other treatment I tried so far, any unexpected event usually ended up accelerating my phase delay, but here even if sometimes I had to sleep/wake-up later, in a matter of days I could slide back in place to my stabilized bedtime and wake-up time.
+</p>
+
+<p>
+Safety/Risk analysis:<br>
+<ul>
+<li>Apart from the mixup with glucose, melatonin is generally considered a <a href="https://www.ncbi.nlm.nih.gov/pubmed/31722088" title="safe molecule" class="https">safe molecule</a>, being a <a href="https://pubmed.ncbi.nlm.nih.gov/28828619/" title="major antioxydant of the body along with many other health maintenance roles" class="https">major antioxydant of the body along with many other health maintenance roles</a> such as <a href="https://www.ncbi.nlm.nih.gov/pubmed/25941822/" title="male reproduction" class="https">male reproduction</a> and also <a href="https://www.ncbi.nlm.nih.gov/pubmed/24118696" title="female reproduction" class="https">female reproduction</a> (see also <a href="https://www.ncbi.nlm.nih.gov/pubmed/19905996" title="here," class="https">here,</a> <a href="https://www.ncbi.nlm.nih.gov/pubmed/24996495" title="here" class="https">here</a> and <a href="https://www.ncbi.nlm.nih.gov/pubmed/24132226" title="here with not only melatonin but circadian cycle impact on fetal and placenta physiology" class="https">here with not only melatonin but circadian cycle impact on fetal and placenta physiology</a>), and is known to be a <a href="https://www.ncbi.nlm.nih.gov/pubmed/28828619" title="major neuroprotector" class="https">major neuroprotector</a> and likely a <a href="https://www.ncbi.nlm.nih.gov/pubmed/22074586/" title="major anti-cancerigen" class="https">major anti-cancerigen</a>. It also <a href="https://www.frontiersin.org/articles/10.3389/fendo.2019.00391/full" title="isn't addictive" class="https">isn't addictive</a>.</li>
+<li>Blue light in blue therapy glasses may be dangerous for the eyes, but Luminette and a few others constraint the blue light spectrum to a reduced spectrum and intensity that should not be dangerous at all, and these glasses are certified by the stringent european union safety standards.</li>
+<li>long term meat-based ketogenic diet may lead to cardiovascular issues and premature death, but vegetarian/plant-based ketogenic diet seems to be on the contrary slightly positive for health.</li>
+<li>timed meals are shown to be good to regulate glucose and reduce the risk of metabolic diseases such as obesity and cardiovascular diseases.</li>
+</ul>
+</p>
+
+<p>
+Before this therapy, first wait for the circadian rhythm to be where you would like it to be, in other words that your natural night sleep is in phase with the day-night cycle. This is to optimize the photic history. Indeed, it's highly difficult to be entrained in opposition to the day-night cycle (such as in night shift work). Meanwhile, you can make a sleep log, this will help you estimate when your circadian rhythm is in the adequate phase. It can be difficult to distinguish between naps and the night sleep. The way I do it is that I consider sleep lasting more than 5h to likely be night sleeps, and anything shorter can be naps. If you exclude all naps (sleeps &lt;5h in duration), then it should give a clearer picture of where your circadian rhythm is, whether or not the exclusion criterion is too drastic. Or you can use the fast delay chronotherapy below to cycle forward faster to an ideal sleep/wake time.
+</p>
+
+<p>
+Bonus: protocol for a fast phase delay chronotherapy, in other words to recycle faster towards your ideal sleep timing when night walking. The protocol is simple: simply eat a strict keto diet. As soon as ketosis will be reached, your body will adapt up to twice as fast to the ideal sleeping time compared your normal freerunning period (eg, if usually you phase delay of 30min/day, you may phase delay 1h/day or more). Optionally, combine with wearing the blue blocker sunglasses 2 to 4h before the expected (daily delayed) sleeping time to leave some room for melatonin to build up and hence have a better consolidated (ie, more resting) sleep. If for example you sleep only 5h30 on average with the strict keto diet, this may be an issue with the melatonin being inhibited by light, and hence the blue blocker sunglasses may help.
+</p>
+
+<h3>TROUBLESHOOTING</h3>
+
+<p>
+This section aims to answer several common and less common but crucial questions about circadian rhythm disorders and the potential treatments. The content aims to be a short version of the most crucial details I have accumulated in <a href="" title="my more complete 200+ document" class="page">my more complete 200+ document</a>, which you can read if you would like further information or details.
+</p>
+
+<p>
+There are two kinds of solutions usually: either change your environment, or wear gadgets to isolate from the environment. This guide prefer the latter, because although the results may be similar, wearing a gadget is much more controllable and hence more reliable than modifying the environment. However, this may end up a bit more expensive, but in my experience it's not much, and the gain is huge. So here for example we prefer an eye mask and ear plugs instead of using cardboard on the window and soundproofing the walls. We also prefer using blue blocker sunglasses and light therapy glasses such as Luminette instead of advising to buy bright light neon fixtures that you'll need to setup up all around your house at the correct orientation for you or to go outside for a walk early in the morning: it's far easier to just put some glasses on your nose when your alarm rings.
+</p>
+
+<h4>Sleep diary</h4>
+
+<p>
+Making a sleep log is the most useful thing someone with a sleep disorder can do. I strongly recommend to write a sleep log of when you fall asleep and when you wake up, for <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="at least 2 weeks" class="https">at least 2 weeks</a> but preferably longer. This sleep log will not only be helpful to you to better understand your sleep patterns, but also <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="can be used for diagnosis with a sleep specialist" class="https">can be used for diagnosis with a sleep specialist</a> and also is necessary to correctly time the only few treatment options that exist currently.
+</p>
+
+<h4>Why modify your circadian rhythm? Isn't free-running healthy enough?</h4>
+
+<p>
+The primary issue with having a circadian rhythm disorder is of course the huge chronic sleep deprivation that is constantly induced by the social jetlag (ie, the attempts to constraints to social expectations/requirements for work, family, hobbies, etc). Chronic sleep deprivation is a major health issue, not only for circadian rhythm disorders as most people are sleep deprived, although not to the extent that individuals with a circadian rhythm disorder experience. No need to go into details, you can find plenty of resources detailing how harmful and dangerous sleep deprivation is, one of the rare disorders that can directly cause death.
+</p>
+
+<p>
+Sleep deprivation can either be fixed by free-running or by being entrained, the latter being very difficult if not impossible to reach for most non24 at this stage of scientific knowledge. So is free-running enough to live heathily? Unfortunately, that's unlikely.
+</p>
+
+<p>
+Indeed, free-running means that there is a constant desynchronization between the individual's circadian rhythm and the day/night cycle. But the production of some hormones, such as melatonin, is dependent on this external cycle. Melatonin is most produced during the night, as it is inhibited by bright light. Hence, a free-running individual is likely to have reduced levels of melatonin due to unwanted inhibition by light exposure.
+</p>
+
+<p>
+What are the consequences of melatonin reduction? Well, melatonin is a strong (maybe the strongest) anti-oxydant in the body. It is also immunomodulatory. Hence, a lack of melatonin is linked in animal models with various diseases and immunodepression.
+</p>
+
+<p>
+Furthermore, mistimed eating when melatonin is at high levels in the body has been linked with metabolic dysregulations, and even directly caused diabetes in an animal model, without any other change of any other factor. Hence, both the lack of melatonin and the mistiming of melatonin with other factors such as food can produce detrimental effects on health, whether or not the individual is sleeping enough by free-running. (But of course these risks are far lower than what chronic sleep deprivation causes, so health-wise it's preferable to freerun rather than suffer from sleep deprivation, but it's also preferable to be entrained than to freerun, if of course an efficient treatment is possible for the individual).
+</p>
+
+<p>
+Hence, supplementation of melatonin serves two purposes: to both supplement to overcome the lack of melatonin, and help with entrainment which directly reduces unwanted inhibition of melatonin by light.
+</p>
+
+<h4>Melatonin</h4>
+
+<p>
+It's impossible that melatonin doesn't affect you. It's processed by every single cells in your body, and it's a necessary hormone with lots of biological functions apart from circadian rhythm stabilization, without it you would likely be dead.
+</p>
+
+<p>
+If melatonin does not seem to work for you, there are 3 possible reasons i see for melatonin pills to be ineffective in your case:
+</p>
+
+<p>
+1- Incorrect formulation: instant release form works better than prolonged release for circadian rhythm disorders. If unsure, just crush the pills into a powder, this will make it into an instant release form in any case because it's only the coating that can make melatonin into a prolonged release form.
+</p>
+
+<p>
+2- Wrong timing: intake should be 2-6h before your natural sleep onset, not your target one.
+</p>
+
+<p>
+3- Bright light exposure after taking melatonin will inhibit melatonin. Even a computer screen at medium or full brightness can inhibit melatonin (because the effect is stronger when you stare at the light source).
+</p>
+
+<p>
+4- <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5263069/" title="High variability in the quality control of over-the-counter melatonin pills, sometimes with a dosage 5x higher or smaller than what is labelled on the package" class="https">High variability in the quality control of over-the-counter melatonin pills, sometimes with a dosage 5x higher or smaller than what is labelled on the package</a>, even for the same brand and product but between lots. This variability may be the root cause for why some people report too much effect, while others report no effect at all for the same dosage. It may simply be that under the hood they didn't have the same dosage at all. If you experienced too much effect with melatonin, at least this is a good hint this works, so you may try another brand with the same or different dosage to adjust and maybe find a brand with a good enough quality control, or ask a pharmacy to make a preparation in a lab for you. Personally, after trying lots of melatonin formulations including from pharmacies and labs, I found the Valdispert 1.9mg instant release melatonin works well and stably, but I can't guarantee the stability nor purity. Also, a tip as the authors note: "the <b>least variable products were those that contained the simplest mix of ingredients, generally oral or sublingual tablets with melatonin</b> added to a filler of silica or cellulose derivatives and were the most reproducible", which is the case of Valdispert 1.9mg instant release melatonin, where melatonin is the sole active component (no camomille or other "sleeping inducing natural herbs" stuff).
+</p>
+
+<p>
+5- Optionally: Reduce/avoid food and sweet drinks after taking melatonin. Some people have a genetic mutation of the melatonin type 2 (MT2) receptor that does weird things when both glucose and melatonin are present in the blood stream.
+</p>
+
+<p>
+Fwiw, for 10 years i was like you, i thought melatonin had no effect on me, until i recently learned how to use it. It's a quite delicate thing, it only works under specific circumstances.
+</p>
+
+<p>
+Is melatonin safe for kids? It was used in multiple trials for autistic children, and is even commercially available as a medically regulated drug under the name of Circadin, so yes it is safe. Also, there is no known letal dose, since humans could ingest orally up to 100mg with no issue. The <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="AASM guidelines" class="https">AASM guidelines</a> issued a WEAK FOR in favor of melatonin treatment for children with DSPD.
+</p>
+
+<h4>Eye mask or light curtains</h4>
+
+<p>
+Eye mask: silk is enough if not directly exposed to sunlight (but indirectly), but if directly exposed then use 3D rigid black eye mask, they should be totally opaque at the expense of being a bit less comfortable.
+</p>
+
+<p>
+Do NOT put cardboard or black plastic behind your window to curtain it, because this will accumulate temperature in the window's glass and ultimately break it! Prefer to use an eye mask or if you really want to curtain your window, you can try a light reflector / windscreen shade reflector, but be warned I did not test this and this may also break your window: <a href="https://www.amazon.co.uk/SILVER-FOLDING-WINDSCREEN-SHADE-REFLECTOR/dp/B004VMORXE" title="https://www.amazon.co.uk/SILVER-FOLDING-WINDSCREEN-SHADE-REFLECTOR/dp/B004VMORXE" class="https">https://www.amazon.co.uk/SILVER-FOLDING-WINDSCREEN-SHADE-REFLECTOR/dp/B004VMORXE</a>
+</p>
+
+<h4>Luminette</h4>
+
+<p>
+Luminettes aren't really necessary, anything that stimulate your nasal hemiretina should work. Blue light stimulate your ipRGCs receptors more, those that impact the circadian rhythm, but <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6926481/" title="amber light was also shown to affect the circadian rhythm" class="https">amber light was also shown to affect the circadian rhythm</a> since the body can also use variations in the light's color as a zeitgeber, in addition (or replacement) to light intensity.
+</p>
+
+<p>
+The effect of light on the circadian rhythm is not solely due to its inhibition of melatonin, because it was shown that <a href="https://pubmed.ncbi.nlm.nih.gov/29707782/" title="intermittent light can phase advance the circadian rhythm without reducing melatonin production, and that a longer light exposure causes more phase advance irrespective of any effect on melatonin" class="https">intermittent light can phase advance the circadian rhythm without reducing melatonin production, and that a longer light exposure causes more phase advance irrespective of any effect on melatonin</a>. Hence, <a href="https://pubmed.ncbi.nlm.nih.gov/29707782/" title="melatonin is decoupled from the circadian rhythm" class="https">melatonin is decoupled from the circadian rhythm</a> as shown by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5983144/" title="several" class="https">several</a> <a href="https://link.springer.com/article/10.1007/s11818-019-00215-x" title="studies" class="https">studies</a>.
+</p>
+
+<p>
+Although the phase advance effect of light and melatonin is limited, they <a href="https://academic.oup.com/jcem/article/95/7/3325/2596406" title="are additive" class="https">are additive</a>, so that you can for example get 1h phase advance from melatonin and separately 1h from light therapy, and combining both would give you 2h in theory (in practice it will be less because there is some natural biological variability from day-to-day, but at least by combining multiple therapies you get more leeway to stay entrained despite uncontrollable disturbances).
+</p>
+
+<p>
+So it is possible to try to use only light therapy alone, it was shown in lots of studies and in systematic reviews to work without needing melatonin, but of course you will get less effect. Expect about 1-2h of phase advance with each treatment alone, and combined the effect is additive (melatonin + light therapy can help you to achieve 2-4h in total).
+</p>
+
+<p>
+Luminette can be put on top of glasses if you wear glasses usually, and they use a battery that lasts for 5 days with 1 to 2 uses per day (= 1 to 2h with the 500 lux light intensity setting).
+</p>
+
+<p>
+If you want a cheaper alternative, there are the Re-Timer glasses, which I did not try. <a href="https://link.springer.com/article/10.1007/s41105-018-0167-5" title="Re-timer 's green light is sufficient to phase advance" class="https">Re-timer 's green light is sufficient to phase advance</a>, but since it's using green light it doesn't increase vigilance so it doesn't change the feeling of subjective sleepiness in the morning. But this can also be due to the study design, i need to read more. But re-timer uses green light, which is a weird choice because <a href="https://www.psio.com/fr/recherche-lumiere-verte.html" title="green light is more efficient at pain reduction" class="https">green light is more efficient at pain reduction</a>, whereas blue light is better for vigilance and circadian rhythm.
+</p>
+
+<p>
+Can the light therapy glasses work even with eyes closed?
+</p>
+
+<p>
+&gt; The eyelid acts as a red-pass filter (Zeitzer et al. 2014) and transmits only approximately 3%–14% of light (Robinson et al. 1991) in a wavelength-dependent manner. Thus, the retinal exposure of light depends on the status of the eyes (open, closed).<br>
+<a href="https://www.ncbi.nlm.nih.gov/pubmed/30311830" title="https://www.ncbi.nlm.nih.gov/pubmed/30311830" class="https">https://www.ncbi.nlm.nih.gov/pubmed/30311830</a>
+</p>
+
+<p>
+So yes it works but much less. What i do is that i first use the Luminette for a few minutes with the eyes closed so my eyes have some time to adjust, and then i open. It's good to adjust the eyes so you don't get side effects of sudden bright light. But then it's better to open the eyes as soon as possible to get the full circadian shifting effect. <a href="https://pubmed.ncbi.nlm.nih.gov/28656675/" title="There is a link between pupil adjustment to light/darkness and circadian rhythm shifting" class="https">There is a link between pupil adjustment to light/darkness and circadian rhythm shifting</a>, because both are mostly modulated by the ipRGCs (in case of the effect of light on the circadian rhythm, but other things can impact the circadian rhythm such as food). So basically if your pupil is  contracted, you're likely doing the dark therapy good enough. If your pupil is dilated (so you can't see in darkness), then you're doing bright light therapy good.
+</p>
+
+<p>
+Is light therapy dangerous for the eyes, more precisely the macula? According to European Union, <a href="https://www.anses.fr/fr/system/files/AP2014SA0253Ra.pdf" title="ANSES" class="https">ANSES</a> and FDA regulations, and also <a href="https://www.ncbi.nlm.nih.gov/pubmed/28891192" title="systematic reviews by scholars" class="https">systematic reviews by scholars</a>, if the device is filtering UV light and the intensity is not too much, and the user does not have a macular disease, then it is fine. I cannot cover all devices, but Luminette is validated under the all those regulations.
+</p>
+
+<p>
+However, <a href="https://www.nature.com/articles/s41598-018-26635-7" title="a recent study found that light therapy devices (more precisely the Re-Timer) modified significantly the macula under 7 days of usage" class="https">a recent study found that light therapy devices (more precisely the Re-Timer) modified significantly the macula under 7 days of usage</a>, with only 30 min of bright light exposure per day at wake up. However, the experiment design needs to be considered: the participants were maintained in a room constantly under 10 Lux, which is very low (1 lux = light emitted by 1 candle). Hence, this study did not just test the effect of bright light therapy, but more precisely the effect of <b>sudden</b> bright light therapy in a constantly dim environment. This forced the participants to have dilated pupils, which is known to multiply the effects of light. Hence, there needs to be more research to elucidate whether 1- the significant changes that were found are clinically significant (ie, can they lead to diseases or they are just natural body adaptations that are not indicative of any disease), and 2- whether these observed effects are due to pupil dilation, in other words if the user takes some time to adapt their eyes beforehand (eg, by closing the eyes the first few minutes while under the bright light, to let their pupils contract) these effects would disappear.
+</p>
+
+<h4>Dark therapy and blue blocker glasses</h4>
+
+<p>
+About f.lux and other blue light filter apps, they are indeed effective, but not enough, it's also necessary to dim the screen brightness to the minimum, and unfortunately most computer screens do not dim much the backlight (they rather use a variable flickering scheme which is worse because it becomes an intermittent bright light device), so it's preferable to rather use a smartphone or wear blue blocker sunglasses:
+</p>
+
+<p>
+&gt; Smartphone use may delay sleep onset. One factor is the light emitted by their screens, but another may also be its entertaining character or related psychological effects, or both. Using the “night shift” mode of modern smartphones, the colour balance of the screen can be shifted to “warmer” and orangeish colours depleted in short-wavelength light. On a recent iPhone 7, this amounts to a reduction of melanopsin activation by 67% at full display brightness. This might seem like a large reduction at first, though by simply dimming the smartphone to its minimum level, the melanopsin activation can be reduced to less than 1% of the activation at maximum display brightness.<br>
+<a href="https://link.springer.com/article/10.1007/s11818-019-00215-x" title="https://link.springer.com/article/10.1007/s11818-019-00215-x" class="https">https://link.springer.com/article/10.1007/s11818-019-00215-x</a>
+</p>
+
+<p>
+And this quote is for smartphone, which have a much lower minimal brightness than computer screen because they need to save power for extended battery duration, because they try to save on backlight power.<br>
+In my experience, using a smartphone with the Twilight app for blue filtering and dimming light to the max on the phone and a bit more in the app allows to use the smartphone with little impact on the circadian rhythm or feelings of tiredness.
+</p>
+
+<p>
+A very convenient approach is to use blue blocker SUNglasses, they will both filter blue light and dim any light source (which includes devices without an OS that supports 3rd-party blue filtering app, such as alarm clocks, TV screens, etc).
+</p>
+
+<p>
+Blue blocker glasses should be used <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="2-3h before habitual bedtime" class="https">2-3h before habitual bedtime</a>.
+</p>
+
+<p>
+But be careful: not all blue blocker glasses are alike. Most are made to filter the blue light from screens, but for from sunlight, which is very different and hence will be insufficient for any other purpose than filtering screens light. Hence, it is strongly advised to choose a blue blocker glasses that provably filters the whole spectrum of blue and green light. To prove the filtering efficiency, it's simple: use a spectrometer behind the glasses under the sunlight. However, spectrometers are quite expensive. But fortunately there are a few tests you can refer to, such as this one, which shows that <a href="https://www.blublox.com/blogs/news/spectrum-test-results-for-leading-blue-light-glasses-brands-revealed" title="both UVEX (cheap industrial safety props maker) and Blublox (more expensive but filters a bit more) filter most of the blue and green light bands" class="https">both UVEX (cheap industrial safety props maker) and Blublox (more expensive but filters a bit more) filter most of the blue and green light bands</a>. Indeed, an <a href="https://www.blublox.com/blogs/news/youre-wearing-the-wrong-blue-light-glasses" title="adequate blue blocker glasses must also blocking green light" class="https">adequate blue blocker glasses must also blocking green light</a>. Another thing to consider is how much the blue blocker glasses are covering your eyes: if they don't cover adequately, light coming from the sides can still reach your eyes, and actually most of the ipRGC cells (the ones that shift your circadian rhythm) are located in the nasal region, so light coming from the sides of the eyes are very effective at shifting your circadian rhythm.
+</p>
+
+<p>
+Nothing is ideal, but I think it's better to be aware of the limitations of the tools we use so we can better use them when they fit and use something else when they don't. So with less filtering blue blocker glasses, such as those offered for "comfort" on prescription glasses, it's ok and better than nothing, but don't go thinking that wearing them is enough to block everything, you should combine them with a blue light filter on your computer such as f.lux and shutdown your room lamps. Whereas with more protective blue blocker glasses such as UVEX which blocks almost all of blue and green light, and combined with a black shading film to dim down the light intensity, wearing the glasses is usually sufficient without requiring any additional software or environmental adaptations, hence they can be used in virtually all contexts (and are great for example at work or other environments where you can't control the light exposure otherwise).
+</p>
+
+<p>
+The blue blocker glasses are just a way to do dark therapy while being independent from environmental conditions. You can use them when you are out at a friend's house for example, or if someone is at your house for a dinner or something, you can still do your dark therapy while keeping the lights on for your guests. But if you can control your environment, red light bulbs combined with blue light filters softwares on computer and dimming down the intensity to the minimum is as effective as wearing blue blocker sunglasses.
+</p>
+
+<p>
+You can also use your smartphone (for reading or videos or anything) with the Twilight app (it's the same as f.lux on computers) and the intensity dimmed down to the minimum. I found that like that, the smartphone screen is emitting so little light that it doesn't influence the circadian rhythm in any significant way. It's much like reading a book in that case. Also reading books can make you exposed to more light, because you need a lamp to light the book, so it's actually not necessarily a good idea. As indicated by <a href="https://link.springer.com/article/10.1007/s11818-019-00215-x" title="a review" class="https">a review</a>:
+</p>
+
+<p>
+"Smartphone use may delay sleep onset. One factor is the light emitted by their screens, but another may also be its entertaining character or related psychological effects, or both. Using the <b>“night shift” mode</b> of modern smartphones, the colour balance of the screen can be shifted to “warmer” and <b>orangeish colours</b> depleted in short-wavelength light. On a recent iPhone 7, this <b>amounts to a reduction of melanopsin activation by 67%</b> at full display brightness. This might seem like a large reduction at first, though <b>by simply dimming the smartphone to its minimum level,</b> <b>the melanopsin activation can be reduced to less than 1% of the activation at maximum display brightness</b>."
+</p>
+
+<p>
+A great tip I am still experimenting with but I think is a great lead: if you're doing dark therapy right, your eyes should be dilated just like as if you were in the dark. This is because it's the same photoreceptive cells in the eye (the ipRGC cells) that are both modulating the pupil's dilation and circadian rhythm shifting in response to light exposure. So remember the test: check if your pupils are dilated. If you can see in the dark while using a device or doing an activity, it's ok for dark therapy and hence can be used during the 3h before bedtime.
+</p>
+
+<h4>Diet (carbs or keto)</h4>
+
+<p>
+If you don't know wheter you are sensitive to carbs, think about whether you experience postprandial sleepiness (fatigue after lunch) after eating pasta and such high carbs food. When i was under the strict keto diet, i rarely if ever experienced that, i could always just resume work just after finishing eating. Indeed, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2699659/" title="eating produces melatonin and serotonin" class="https">eating produces melatonin and serotonin</a>, both having an effect on the circadian clock. Thanks to the PRC, for normal sleepers who eat during the day their meals, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1262766/" title="eating causes slight drowsiness only but does not impact their circadian rhythm because melatonin then gets produced at the &quot;dead zone&quot; of the melatonin PRC" class="https">eating causes slight drowsiness only but does not impact their circadian rhythm because melatonin then gets produced at the "dead zone" of the melatonin PRC</a>, where it has little to no effect, but for non24 and their difficulty in knowing their circadian rhythm, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3860420/" title="a mistimed meal can offset their circadian rhythm one way or the other" class="https">a mistimed meal can offset their circadian rhythm one way or the other</a>, and even just <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4677771/#!po=4.97382" title="the availability of food can shift the circadian rhythm" class="https">the availability of food can shift the circadian rhythm</a>.
+</p>
+
+<p>
+Furthermore, a vicious cycle can be created, since <a href="https://www.psychologytoday.com/intl/blog/sleep-newzzz/201601/unlocking-the-sleep-gut-connection" title="the diet composition and timing affects the gut microbiota, which in turns also affects the body/peripherial circadian clocks" class="https">the diet composition and timing affects the gut microbiota, which in turns also affects the body/peripherial circadian clocks</a>., which may even lead to a <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6851668/" title="Circadian Syndrome" class="https">Circadian Syndrome</a> (new proposed name for the metabolic syndrome diseases such as diabetes and obesity), with <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6694156/" title="a causal relationship having been demonstrated in animals" class="https">a causal relationship having been demonstrated in animals</a>.
+</p>
+
+<p>
+Hence the necessity of timing meals accordingly to the circadian rhythm and carefully design the composition of one's diet, as it appears food is a "<a href="https://www.ncbi.nlm.nih.gov/pubmed/32363197" title="powerful environmental cue with the potential to destroy or restore the synchrony of circadian rhythms in metabolism" class="https">powerful environmental cue with the potential to destroy or restore the synchrony of circadian rhythms in metabolism</a>".
+</p>
+
+<h4>Chronotherapy</h4>
+
+<br>
+
+<p>
+The circadian plasticity theory, which is the hypothesis that behavioral interventions can increase or reduce the duration of the circadian period, stems from only a handful of cases of individuals with dspd turning into non24 after a behavioral chronotherapy. These cases may as well have been simple misdiagnoses from the get go, which is certainly not uncommon for circadian rhythm disorders and in particular the rare variants such as sighted non24.
+</p>
+
+<p>
+On the other hand, there is no evidence at all of any individual with non24 getting entrained for a reasonably long period of time with a chronotherapy alone. More anecdotally but still of importance, i think nearly everyone here tried to force themselves to a 24h schedule at some point in their lives, and the fact we are still here looking for a proper treatment only shows these attempts unfortunately failed. Furthermore, the AASM stated in <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="its guidelines" class="https">its guidelines</a> that only indirect evidence exists, so chronotherapy (or Prescribed Sleep-Wake Scheduling as they call it) is at this point only a "potential therapeutic intervention" with no direct evidence it works, it's only theoretical. This also includes CBT-i (cognitive behavioral intervention for insomnia), which can be seen as a kind of structured chronotherapy or sleep hygiene. Also, it was shown that <a href="https://www.ncbi.nlm.nih.gov/pubmed/25845891" title="night owl chronotypes had less benefits from CBT-i interventions" class="https">night owl chronotypes had less benefits from CBT-i interventions</a>, hence it's arguable whether DSPD and non24 can get any benefit at all.
+</p>
+
+<p>
+In my experience, i have tried several chronotherapy schemes, including with light therapy. I could never reduce or increase the period, whatever i did. Keep in mind I tried various schemes ranging from the flexible to the extremely rigorous (to give you an idea: I eat everyday the same meal with the same composition and similar quantity everyday and properly timed according to my circadian rhythm since a year now to factor out diet composition and timing as a confounder), so sleep hygiene or rigor was certainly not an issue. There is only one exception being the strict ketogenic diet which multiplied my daily phase delay by 2 (ie, my daily phase delay was 1h instead of 30min), but this is not a chronotherapy and the biological changes induced by this diet are way beyond what a behavioral intervention can achieve.
+</p>
+
+<p>
+So, you may try your own chronotherapy, after all you don't risk much apart from the sleep deprivation you likely already experience as otherwise you wouldn't pursue a way to fix your circadian rhythm. Indeed, either the chronotherapy works and hence even if it goes wrong (ie, increase your phase delay instead of reducing it), you'll know you'll have a leverage to manipulate your circadian rhythm. The idea is that if you can't entrain, you can try to at least find treatments that can modify your phase delay: if you have some treatments that can make it shorter, use it to extend the periods you like, whereas if other treatments make it longer (ie, your daily phase delay is increased, you sleep/wake up later), then use them to skip through the periods you dislike (eg, night walking). Either it doesn't work (as I am unfortunately strongly convinced), and then anyway whatever behavioral intervention you can do won't modify your circadian rhythm a bit, so you'll just have to deal with the temporarily increased sleep deprivation you experienced.
+</p>
+
+<p>
+If you have a hard time understanding (or making others understand) why the circadian rhythm is unlikely to be manipulable through sheer willpower, you can make an analogy with diabetes: noone wants to be diabetic, and if diabetics could become non-diabetic just by willpower, they certainly all would just do that. Circadian rhythms are the same, they are mostly set in our biological code throughout the body, starting from the DNA and with some potential environmental changes (this is NOT the same as behavioral changes, see epigenetics). This analogy with diabetes may actually be quite accurate seeing how many evidences accumulate linking the two (and other metabolic syndromes, see the Diet subsection in Troubleshooting).
+</p>
+
+<p>
+Partially from my own post: <a href="https://www.reddit.com/r/N24/comments/gycc26/inverting_non_24/ftavh7o?utm_source=share&utm_medium=web2x" title="https://www.reddit.com/r/N24/comments/gycc26/inverting_non_24/ftavh7o?utm_source=share&amp;utm_medium=web2x" class="https">https://www.reddit.com/r/N24/comments/gycc26/inverting_non_24/ftavh7o?utm_source=share&amp;utm_medium=web2x</a>
+</p>
+
+                    <br></br>
+                    
+                    <hr class='footnotes'>
+                    <span class="backlinks">
+                    </span>
+    
+                <!-- !! The script will center all images. If you prefer the default (images at left delete these three lines -->    
+                <script>
+                    $( "img" ).wrap( "<div class='imgcenter'></div>" );
+                </script>
+    
+                
+            </div>
+            
+            <!-- Navigation panel -->
+            
+            <div data-role="panel" data-position-fixed="true" data-display="reveal" data-theme="a" id="nav-panel" data-dismissible="false">
+                <div style="display:inline-block;">
+                    
+                    <!-- !! If you want to place your logo, uncomment the next section and fill in the link between the quotation marks after href if you want the logo to link to another page or website -->
+                    <!-- <div id="logos" align="center">
+                        <a title="your title" href="" target="_blank">
+                            <img src=./SleepNon24LiDACMel_files/_resources/zim_logo.png style="border-style:none" align="right"></a>
+                    </div> -->
+                    
+                    <div>
+                        <!-- !! optionally.. add your custom search engine script -->
+                        <a href="#header" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Close panel</a>
+    
+                        <!-- !! optionally.. add link to start page or index page. To do so, uncomment the next 2 lines and fill in the webpage name / url-->
+                        <!-- <br></br>
+                        <a href="./link-to-start-page.html">Name of page</a>-->
+                        
+                        <!-- Generate the links to other pages (between-pages table of contents -->
+                        <ul>
+<li><b>SleepNon24LiDACMel</b></li>
+</ul>
+
+
+                        <!-- Current document's Table Of Contents placeholder and style, this table of content will be generated from headers in the document -->
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+                        <style src="text/css">
+                        .toc-link, .toc-list-item, .toc-list-item a {
+                            /* Remove underlining for all toc entries */
+                            text-decoration: none;
+                        }
+                        .toc-link:not(.is-active-link) {
+                            /* Only leave the active toc entry (currently watched) as bold, else put text in normal weight */
+                            font-weight: normal !important;
+                        }
+                        </style>
+                        <nav class="toc js-toc relative z-1 transition--300 pa4" style="position: relative; max-width:inherit;">
+                        </nav>
+
+                        <!-- !! Optionally, button which brings the user to your contact form. To enable this, remove comment mark below and fill in the link between the quoation marks after href -->
+                        <!--<br></br>
+                        <a title="Contact us" data-icon="info" href="" data-role="button" target="_blank">Contact us</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Generate the Table Of Contents dynamically using javascript (via tocbot) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    <script type="text/javascript">
+    var content = document.body
+    var headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6, h7')
+    var headingMap = {}
+
+    <!-- generate ids dynamically for each header, that's necessary for tocbot to work, source makeids from tocbot repository -->
+    Array.prototype.forEach.call(headings, function (heading) {
+        var id = heading.id ? heading.id : heading.textContent.trim().toLowerCase()
+            .split(' ').join('-').replace(/[!@#$%^&*():]/ig, '').replace(/\//ig, '-')
+        headingMap[id] = !isNaN(headingMap[id]) ? ++headingMap[id] : 0
+        if (headingMap[id]) {
+            heading.id = id + '-' + headingMap[id]
+        } else {
+            heading.id = id
+        }
+        // Add a self-referential link on the header's anchor, easier to share + jump to this anchor if clicked
+        heading.innerHTML = "<a href=\"#"+id+"\" onclick=\"jumpToAnchor('"+id+"');\";>"+heading.innerHTML+"</a>"
+    })
+
+    function jumpToAnchor(anchorId) {
+    // jump to an anchor
+    // from: https://stackoverflow.com/a/52138511/1121352
+    $(document).ready(function() {
+        // Pure JS solution, that doesn't cause the window to go back to the top before sliding to the anchor
+        const element = document.querySelector('#'+anchorId)
+        const topPos = element.getBoundingClientRect().top + window.pageYOffset
+
+        window.scrollTo({
+            top: topPos, // scroll so that the element is at the top of the view
+            behavior: 'smooth' // smooth scroll
+        })
+        // JQuery solution
+        /*
+        $('html, body').animate({
+            'scrollTop':   $('#'+anchorId).offset().top
+        }, 500);
+        */
+        // Ensure the anchor is added in the URL so the user can more easily copy the link and share from the browser's address bar directly
+        location.hash = "#" + anchorId;
+    });
+    }; // }(JQuery);
+
+    <!-- initialize tocbot with some options -->
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.js-toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: '.content',
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      // For headings inside relative or absolute positioned containers within content.
+      hasInnerContainers: true,
+      // Header levels collapsing by default
+      collapseDepth: 2,
+    });
+    </script>
+
+</body>
+</html>
