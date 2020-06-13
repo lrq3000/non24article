@@ -1010,7 +1010,7 @@ The author is also active on reddit: <a href="https://www.reddit.com/user/lrq300
 
     <!-- ensure the window is scrolled to the anchor after the page finished loading (else jquery may scroll back to top, particularly on mobile) -->
     document.addEventListener('DOMContentLoaded', function() {
-        anchor = window.location.hash;
+        anchor = window.top.location.hash;
         anchor = anchor.split("#").pop();
         jumpToAnchor(anchor);
     }, false);
