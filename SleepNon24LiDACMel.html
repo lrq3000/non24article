@@ -575,6 +575,33 @@ Photos of the Luminette v3, which has a longer battery and possibility to set 3 
 <img src="./SleepNon24LiDACMel_files/luminette-v3-2.jpg" width="400">
 </p>
 
+<h4>A cheaper alternative for light therapy</h4>
+
+<p>
+If you really are low on money and can't afford the light therapy glasses, I do not advise to buy a light therapy lamp. Sure, there are inexpensive ones available, but there are three major downsides:
+</p>
+
+<p>
+<ol type="1" start="1">
+<li>the cheapest light therapy lamps are not very powerful, they say they emit 10K lux but it's only at point-blank with no range, and with lux approximately decreasing quadratically with the distance, it means that if you are just a few centimeters away from the ideal distance, you will get very low lux (low light intensity).</li>
+<li>they are cumbersome to use, you need to stay in front of them for minimum 30 minutes up to several hours, and it's hard to do anything in front given how close you need to stay to the lamp and the angle you need for your eyes to get properly exposed.</li>
+<li>the major drawback I think is that it's only one lamp, whereas both of our eyes have ipRGC cells (the photoreceptive cells that shift the circadian rhythm depending on their exposure to light). The more ipRGC cells that are stimulated, the bigger circadian shift that happens. Unfortunately, with only one lamp, if it's set on the side of your peripheral vision, it will only stimulate one eye's ipRGC cells (since they are located in the macula and the nasal part of the retina). Ideally, you would need <a href="https://pubmed.ncbi.nlm.nih.gov/10194647/" title="2 such lamps and adequately placed" class="https">2 such lamps and adequately placed</a>, but at this point light therapy glasses are as much expensive and much more comfortable to use and they stimulate both eyes cells.</li>
+</ol>
+</p>
+
+<p>
+<img src="./SleepNon24LiDACMel_files/pasted_image002.png" width="300"><br>
+<i>Ideal placement of 2 light therapy lamps, on the sides of both eyes so that the light can reach the nasal region of both eyes' retinas. Image from </i><a href="https://pubmed.ncbi.nlm.nih.gov/10194647/" title="this study" class="https">this study</a><i>.</i>
+</p>
+
+<p>
+An inexpensive and potentially more effective strategy is to use computer screens at their maximal intensity directly at wake-up for 30min to 2h. Not only the distance to the user is similar to a light therapy device (contrary to TV screens which may be too far to get enough lux), but also the user can stare directly at the screen, which light will stimulate the ipRGC cells in the macula of both eyes. Then, the rest of the day, the user can get exposed to natural sunlight to increase the duration of light exposure without any device. In the evening, the screens must be dimmed and blue light filtered to avoid the circadian phase delay effect opposing the circadian phase advance obtained in the morning.
+</p>
+
+<p>
+Note however that screens may not be sufficient in winter, due to the reduced intensity of natural sunlight, so light therapy glasses are certainly more reliable.
+</p>
+
 <h4>Dark therapy and blue blocker glasses</h4>
 
 <p>
@@ -626,7 +653,7 @@ Blue blocker glasses should be used <a href="https://aasm.org/resources/clinical
 </p>
 
 <p>
-Here is a DIY blue blocker sunglasses made out of a UVEX Skyper blue blocker glasses, with added 5% shading filters for cars windows (one filter outside and one filter outside = 2 in total), simply taped onto the frame:<br>
+Here is a DIY blue blocker sunglasses made out of a UVEX Skyper blue blocker glasses, with added 5% black shading/tinting filters for cars windows (one filter outside and one filter outside = 2 in total, 5% means that 95% of light is filtered), simply taped onto the frame:<br>
 <img src="./SleepNon24LiDACMel_files/uvex-skyper-blue-blocker-sunglasses-1.jpg" width="400"><img src="./SleepNon24LiDACMel_files/uvex-skyper-blue-blocker-sunglasses-2.jpg" width="400">
 </p>
 
@@ -663,6 +690,18 @@ If you have prescription glasses, you can choose the Uvex S0360X Ultra spec SCT 
 <p>
 <img src="./SleepNon24LiDACMel_files/Uvex-S0360X-Ultra-spec-SCT-Orange.jpg" width="400"><br>
 Just like the Skyper, this one can be adapted to SUNglasses by adding shading films.
+</p>
+
+<p>
+In practice, I use 2 pairs of UVEX blue blocker glasses:<br>
+<ul>
+<li>one with shading film that I use to dim down uncontrollable light sources when there is sunlight or at the office when I work late to dim down the bright neon lights,</li>
+<li>and another one without a shading film (so just the blue blocker glasses as-is) that I use in the evening at home to simply filter the blue and green lights.</li>
+</ul>
+</p>
+
+<p>
+Since there is currently no commercially available blue blocker sunglasses to my knowledge, you will need to do it yourself. If you wear prescription glasses, an easier solution might be to buy a clip-on shading lenses, that you clip on your prescription glasses, and then fit the UVEX S0360X on top. This should both filter blue and green lights, as well as dim down all light sources. It may also be possible to use the clip-on on the UVEX glasses themselves (but I did not try). However, the clip-on may not be dimming as well as the DIY solution.
 </p>
 
 <p>
@@ -968,6 +1007,13 @@ The author is also active on reddit: <a href="https://www.reddit.com/user/lrq300
       // Header levels collapsing by default
       collapseDepth: 2,
     });
+
+    <!-- ensure the window is scrolled to the anchor after the page finished loading (else jquery may scroll back to top, particularly on mobile) -->
+    document.addEventListener('DOMContentLoaded', function() {
+        anchor = window.top.location.hash
+        anchor = url.split("#").pop()
+        jumpToAnchor(anchor)
+    }, false);
     </script>
 
 </body>
