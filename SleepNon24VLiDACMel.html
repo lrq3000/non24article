@@ -338,6 +338,10 @@ In practice, the first week you should see a reduction of your phase delay, and 
 
 <h3>Recommended equipment</h3>
 
+<br>
+
+<h4>Equipment for circadian rhythm entrainment</h4>
+
 <p>
 <ul>
 <li>Luminette 3 (229€). Will be the primary treatment AND a calibration tool to evaluate other light emitting devices (to avoid them during dark therapy). It has a 30-days money back warranty (+ of course a 2 years warranty for defects in European Union), so you can test it for a month to see if it affects your circadian rhythm (it should work under 2 weeks of daily use), and if not you can send it back for free.
@@ -358,18 +362,62 @@ In practice, the first week you should see a reduction of your phase delay, and 
 </ul>
 </li>
 <li>Lux meter app on smartphones using the smartphone light sensor (free). For objective assessment of light exposure (to discriminate what devices are OK before bedtime).</li>
-<li>Optional: Maxim Thermocron iButton DS1925EVKIT (DS1925L starter kit, including DS9490R and DS1402D-DR8+ to connect the iButton to computers via USB) ~$100 + comformable medical-grade tape such as Hypafix ~$10. If DS1925L is unavailable, can also use DS1922L but the internal memory is much shorter. For skin temperature monitoring and hence circadian rhythm prediction and objective assessment of treatment efficacy.</li>
 <li>Optional: DNA testing using Nebula Genomics, if MT2 receptor mutation, then also need to control food/glucose and melatonin mixup?</li>
 <li>Optional: smart alarm / chronobiological alarm clock, such as Sleeptracker watches which can vibrate, it's very efficient to ensure waking up despite sleep deprivation, but they do not fix sleep deprivation so the tiredness still appears during the day. Alternatives include Axbo and Sleep As Android app on Android smartphones (but apps are less accurate than wearables).</li>
 </ul>
 </p>
 
-<h3>Useful apps</h3>
+<h4>Wearable circadian rhythm monitor</h4>
+
+<p>
+TODO: This section is a work-in-progress, come back later for updates.<br>
+Although there is currently a "wearables revolution", it is still hard to find devices that can continuously (24/7) record vital signs with a sufficient quality (sampling rate, low noise) to be considered adequate for research or medical purposes. However, there are a few, which we could use and determine as adequate for the purpose of ambulatory circadian rhythm monitoring, potentially by the patients themselves.
+</p>
+
+<p>
+The two major sensors that are the most informative to monitor the circadian rhythm are the temperature sensor and the ECG (with an accelerometer). The total for one iButton and a Polar H10 is less than 200 euros, and these devices will last for several years.
+</p>
+
+<p>
+<ul>
+<li>Body temperature sensor: Maxim Thermocron iButton DS1925EVKIT (DS1925L starter kit, including DS9490R and DS1402D-DR8+ to connect the iButton to computers via USB). Cost: about ~$100 + conformable medical-grade tape such as Hypafix ~$10. If DS1925L is unavailable, can also use DS1922L but the internal memory is much shorter. For skin temperature monitoring and hence circadian rhythm prediction and objective assessment of treatment efficacy.
+<ul>
+<li>Buy also velcro stripes to glue on the Polar H10 chestbelt if you want to combine both and as an alternative to medical tape.</li>
+<li>True 24/7 skin temperature monitoring setup, as the iButton can last 4 years with its integrated battery (then need to buy another one or can try to manually <a href="https://www.researchgate.net/profile/Sean_Haughian/publication/270579725_Replacing_the_batteries_on_ibutton_Thermochron_Hygrochron_data_loggers/links/54aeabbf0cf29661a3d3a42e/Replacing-the-batteries-on-ibutton-Thermochron-Hygrochron-data-loggers.pdf" title="replace the battery as some researchers have done" class="https">replace the battery as some researchers have done</a>).</li>
+<li>Higher-grade alternatives:
+<ul>
+<li>Greenteg CORE, can record core body temperature using Dual-Heat-Flux Method (a method that allows to sense the temperature 2-4cm below the skin, whereas iButtons only sense skin temperature). Costs about 300€, comes with a chest strap (no need for medical tape), can record up to 3.5 days of data on internal memory, battery lasts 6 days. However, to export the temperature data, it's necessary to buy a costly license (99CHF/month or 999CHF indefinite).</li>
+</ul></li>
+</ul>
+</li>
+<li>ECG (heart rate and heart rhythm) + 3-axis Accelerometer: <a href="https://github.com/polarofficial/polar-ble-sdk/blob/1d3ff05bccbd3a5ccc00731e941c73285248fa6b/technical_documentation/H10_ECG_Explained.docx" title="Polar H10" class="https">Polar H10</a>. Costs about 80€. Comes with a chest strap. Battery: 16.5 days with one button (CR2320) battery.
+<ul>
+<li>The Polar H10 sensor needs to be paired via Bluetooth to a smartphone, and an app needs to be used at all times to record the ECG (because only heart rate can be stored on the internal memory). No cloud service registration required, all data is stored locally.</li>
+<li>Use the <a href="https://play.google.com/store/apps/details?id=com.j_ware.polarsensorlogger" title="Polar Sensor Logger app on Android" class="https">Polar Sensor Logger app on Android</a> to log both the <a href="https://github.com/polarofficial/polar-ble-sdk/blob/1d3ff05bccbd3a5ccc00731e941c73285248fa6b/technical_documentation/H10_ECG_Explained.docx" title="ECG and accelerometer data" class="https">ECG and accelerometer data</a> with the sampling rate of your choice (up to 200Hz/8G for the accelerometer and 130Hz for the ECG). It also saves the Heart Rate in a separate CSV file, and the extra columns represent the RR-interval in milliseconds. The timestamp format is in nanoseconds and the epoch is 1.1.2000. Note that the app only requires bluetooth, hence to save battery, the phone can be set to Plane mode and location can be disabled, everything can be disabled except bluetooth, and the screen can be turned off during data collection. Data is stored in realtime in csv files in the sensorDataLogs folder at the device's root, so that even if the logging is interrupted due to a bug or the device being out of battery, the last logging session won't be lost.
+<ul>
+<li>It might be a good idea to buy a dedicated <a href="https://www.gsmarena.com/battery-test.php3" title="Android phone with a long battery" class="https">Android phone with a long battery</a>, which can allow to continuously record up to 10 days with a single charge (the generated data with accelerometer set to 100Hz and 2G is 400KB/min total for accelerometer+ECG+Heart Rate, so this makes for 6GB for 10 days, or 17GB/month, or 200GB/year of data, so it all fits in any modern smartphone's internal memory).</li>
+<li>Alternative to get an even longer battery bluetooth receptor: make an Arduino-based bluetooth low energy (BLE = BT 4.0) logger to microsd card. <a href="https://github.com/SensorsIot/Bluetooth-BLE-on-Arduino-IDE/blob/master/Polar_Receiver/Polar_Receiver.ino" title="Some developers already made heart rate loggers for Arduino" class="https">Some developers already made heart rate loggers for Arduino</a> and Polar H7 chest bands (see also <a href="https://forum.arduino.cc/index.php?topic=116145.0" title="here" class="https">here</a> and <a href="https://makecademy.com/bluetooth-heart-rate-sensor-arduino" title="here" class="https">here</a>), but not the ECG, although the SDK is open so that should also be possible to do.</li>
+</ul>
+</li>
+<li>The H10 sensor can be configured to have a dual Bluetooth stream, so that it can send data to two different devices/apps simultaneously. This can be used advantageously to concurrently continuously record the ECG data on one device, and use another device (the day-to-day smartphone) for when you want to visualize your current heart rhythm in real-time. To do this, install the Polar Beat app, pair the sensor, then go to the settings, click on the sensor and the sensor's options will show up, and then you can enable the "2 BLE receptors" option.</li>
+<li>Combined with the EliteHRV Android and iOS app, the Polar H10 can be used for breathing relaxation exercises (fundamental resonance breathing etc), and also be used as a biofeedback tool.</li>
+<li>Big advantage of this setup compared to others: it really allows for continuous ECG, since there is no need to transfer data to restart a new session, as the phone's memory is used and it's vast. So only the smartphone's battery is the limitation, but it can be recharged while the acquisition continues, and even the data can be transferred concurrently using FTP or similar apps. This is a true 24/7 continuous ECG monitoring setup.</li>
+<li>Higher-grade alternatives:
+<ul>
+<li><a href="https://www.vitalsignum.com/en/" title="VitalSignum Beat2Phone" class="https">VitalSignum Beat2Phone</a>, costs 500 euros, uses a chest strap, can record medical-grade 2000Hz ECG on internal memory for 24-48h, and data is exportable from the Android app to a computer directly without any cloud service necessary. Medical-grade device that is certified in European Union to diagnose atrial fibrillation. </li>
+<li>Shimmer3 ECG, costs 500 euros, 5-wires 4-leads. Medical-grade ECG using standard wet electrodes.</li>
+<li><a href="https://www.researchgate.net/publication/327659029_LoggerBIT_An_Optimization_of_the_OpenLog_Board_for_Data_Logging_with_Low_Cost_Hardware_Platforms_for_Biomedical_Applications" title="BitTalino revolution ECG board with the LoggerBIT firmware and OpenLog breakout board" class="https">BitTalino revolution ECG board with the LoggerBIT firmware and OpenLog breakout board</a> (<a href="https://github.com/BITalinoWorld/firmware-loggerbit" title="sourcecode here" class="https">sourcecode here</a>). Opensource ECG monitor, can record medical-grade 1000Hz ECG using 3-wires wet electrodes on internal memory for 40h with a 700mAh battery (but can use a much longer battery, with a 3000mAh battery the recording can last 7 days).</li>
+</ul></li>
+</ul></li>
+</ul>
+</p>
+
+<h4>Useful apps</h4>
 
 <p>
 <ul>
 <li>Lux meter apps on smartphones</li>
-<li><a href="https://github.com/barrettfdavis/online_actogram" title="Online Actogram by Barrett Davis" class="https">Online Actogram by Barrett Davis</a>, a preliminary python tool to potentially massively screen for circadian rhythm disorders using browser's history (examples <a href="https://www.reddit.com/r/N24/comments/hxve2w/dont_delete_your_browser_history/" title="here" class="https">here</a>).</li>
+<li><a href="https://github.com/barrettfdavis/online_actogram" title="Online Actogram by Barrett Davis" class="https">Online Actogram by Barrett Davis</a>, an opensource preliminary python tool to potentially massively screen for circadian rhythm disorders using browser's history (examples <a href="https://www.reddit.com/r/N24/comments/hxve2w/dont_delete_your_browser_history/" title="here" class="https">here</a>).</li>
 <li><a href="https://github.com/ashutoshgngwr/noice" title="Noice" class="https">Noice</a>, an opensource multisounds whitenoise generator for Android. I recommend enabling a mix of pink noise, brown noise and a natural noise (such as gentle raindrops) to efficiently mask out external noises. Other opensource white noise generators include <a href="https://github.com/pmarks-net/chromadoze" title="Chroma Doze" class="https">Chroma Doze</a> and <a href="https://github.com/davidalbers/whitenoise" title="White Noise Plus" class="https">White Noise Plus</a> for Android.</li>
 </ul>
 </p>
@@ -457,7 +505,7 @@ Organic vs non-organic in DSM, recognized and billable in ICD-10
 </p>
 
 <p>
-<a href="https://pubmed.ncbi.nlm.nih.gov/30092908/" title="Sighted non-24 is considered an orphan disease" class="https">Sighted non-24 is considered an orphan disease</a> (rare and commercially unattractive disease).
+<a href="https://pubmed.ncbi.nlm.nih.gov/30092908/" title="Sighted non-24 is considered an orphan disease" class="https">Sighted non-24 is considered an orphan disease</a> (rare and commercially unattractive disease). It is a billable disease in all countries where ICD-10 or DSM is used for billing medical disorders, and hence open to disabilities accomodation, especially in USA under the Disabilities Act.
 </p>
 
 <p>
@@ -465,15 +513,11 @@ Decreases cognitive performance and alertness (can be dangerous).
 </p>
 
 <p>
-Need accomodations and can get them where ICD-10 or DSM is recognized and used for billing.
-</p>
-
-<p>
 TODO: update the above using: <a href="https://www.reddit.com/r/N24/comments/h8tnco/does_it_make_sense_to_try_to_get_a_diagnosis/" title="https://www.reddit.com/r/N24/comments/h8tnco/does_it_make_sense_to_try_to_get_a_diagnosis/" class="https">https://www.reddit.com/r/N24/comments/h8tnco/does_it_make_sense_to_try_to_get_a_diagnosis/</a>
 </p>
 
 <p>
-Smart business owners with wide office hours (ie, night shift) or where teleworking is possible could <a href="https://www.inverse.com/article/53890-daylight-savings-time-effects-on-health-circadian-rhythm" title="flexibly organize employees schedules based on their circadian alignment to optimize production" class="https">flexibly organize employees schedules based on their circadian alignment to optimize production</a> and <a href="https://www.ncbi.nlm.nih.gov/pubmed/11583769/" title="reduce work accidents, with &quot;sleepiness surpassing alcohol and drugs as the greatest identifiable and preventable cause of accidents in all modes of transport&quot;" class="https">reduce work accidents, with "sleepiness surpassing alcohol and drugs as the greatest identifiable and preventable cause of accidents in all modes of transport"</a>. Indeed, morning larks perform badly and lack attention in the evening or worse at night, whereas night owls perform better in the evening and DSPDs during the night. Hence, with some societal recognition and work culture evolutions, the variety of chronotypes could be leveraged to ensure optimal work conditions and productivity in our already 24/7 society.
+Although employment data are lacking, it is safe to assume given the volume of testimonies that most individuals with non-24 remain unemployed. But this should not necessarily be the case. Smart business owners with wide office hours (ie, night shift) or where teleworking is possible could <a href="https://www.inverse.com/article/53890-daylight-savings-time-effects-on-health-circadian-rhythm" title="flexibly organize employees schedules based on their circadian alignment to optimize production" class="https">flexibly organize employees schedules based on their circadian alignment to optimize production</a> and <a href="https://www.ncbi.nlm.nih.gov/pubmed/11583769/" title="reduce work accidents, with &quot;sleepiness surpassing alcohol and drugs as the greatest identifiable and preventable cause of accidents in all modes of transport&quot;" class="https">reduce work accidents, with "sleepiness surpassing alcohol and drugs as the greatest identifiable and preventable cause of accidents in all modes of transport"</a>. Indeed, morning larks perform badly and lack attention in the evening or worse at night, whereas night owls perform better in the evening and DSPDs during the night. Hence, with some societal recognition and work culture evolutions, the variety of chronotypes could be leveraged to ensure optimal work conditions and productivity in our already 24/7 society.
 </p>
 
 <p>
@@ -484,14 +528,18 @@ However, individuals with non24 would still not fit. Indeed, there are only a ha
 For a more in-depth discussion about non-24 and disabilities, watch <a href="https://www.youtube.com/watch?v=H1Jof7PRCIA" title="this excellent video by Leslie Exp" class="https">this excellent video by Leslie Exp</a> (textual script <a href="https://lessexploitableleslie.wordpress.com/2020/05/17/disability-and-capitalism/" title="here" class="https">here</a>) and this critique of the <a href="https://www.google.com/search?q=isbn:1781683107&tbm=bks" title="24/7 society by Johnathan Crary" class="https">24/7 society by Johnathan Crary</a> (summary <a href="https://doi.org/10.1080/08935696.2014.980679" title="here" class="https">here</a>).
 </p>
 
+<p>
+TODO: add info about remote work from: <a href="https://www.reddit.com/r/N24/comments/jewt6z/what_accommodations_have_you_successfully_got/" title="https://www.reddit.com/r/N24/comments/jewt6z/what_accommodations_have_you_successfully_got/" class="https">https://www.reddit.com/r/N24/comments/jewt6z/what_accommodations_have_you_successfully_got/</a>
+</p>
+
 <h4>Sleep diary and diagnosis</h4>
 
 <p>
-Making a sleep log is the most useful thing someone with a sleep disorder can do. I strongly recommend to write a sleep log of when you fall asleep and when you wake up, for <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="at least 2 weeks" class="https">at least 2 weeks</a> but preferably longer. This sleep log (aka sleep diary) will not only be <a href="https://doi.org/10.1177%2F0269881119855343" title="helpful to you to better understand your sleep patterns" class="https">helpful to you to better understand your sleep patterns</a> (ie, <a href="https://www.ncbi.nlm.nih.gov/pubmed/31256786" title="determine the circadian misalignment" class="https">determine the circadian misalignment</a>), but also <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="can be used for diagnosis with a sleep specialist" class="https">can be used for diagnosis with a sleep specialist</a> according to the official <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="USA" class="https">USA</a> (<a href="http://sleepeducation.org/docs/default-document-library/crswd-draft-executive-summary.pdf?sfvrsn=2" title="executive summary here" class="http">executive summary here</a>) and <a href="https://doi.org/10.1177%2F0269881119855343" title="UK guidelines" class="https">UK guidelines</a> and also is <a href="https://link.springer.com/article/10.1007/s11818-019-00215-x" title="necessary to correctly time the only few treatment options" class="https">necessary to correctly time the only few treatment options</a> (see also <a href="https://www.ncbi.nlm.nih.gov/pubmed/31256786" title="here" class="https">here</a> and <a href="https://doi.org/10.1016/j.smrv.2013.12.001" title="here" class="https">here</a> and <a href="https://doi.org/10.5664/jcsm.7054" title="here" class="https">here</a>) that exist currently, as <a href="https://pubmed.ncbi.nlm.nih.gov/27611743/" title="sleep diaries are reliable estimators of the circadian rhythm" class="https">sleep diaries are reliable estimators of the circadian rhythm</a>. Indeed, due to the unstable nature of the sleep schedule of individuals with non-24, <a href="https://doi.org/10.5664/jcsm.7054" title="it may be necessary to adjust the timing of the therapies from day-to-day" class="https">it may be necessary to adjust the timing of the therapies from day-to-day</a>, or sometimes reduce/increase the dosage (eg, of melatonin) or duration (of light therapy). Sleep diary does not only allow to keep track of bedtime and wake up times, but also of sleep duration, which is a strong predictor of cognitive performance and mood during the day, as well as sleep pressure the next day/night, as too little sleep strongly indicates sleep deprivation, whereas a too long sleep indicates the body attempted to correct for previous sleep deprivation.
+Making a <b>sleep log</b> (also called <b>sleep diary</b>) is the most useful thing someone with a sleep disorder can do. The author strongly recommends to write a sleep log of when you fall asleep and when you wake up, for <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="at least 2 weeks" class="https">at least 2 weeks</a> but preferably longer. This sleep log (aka sleep diary) will not only be <a href="https://doi.org/10.1177%2F0269881119855343" title="helpful to you to better understand your sleep patterns" class="https">helpful to you to better understand your sleep patterns</a> (ie, <a href="https://www.ncbi.nlm.nih.gov/pubmed/31256786" title="determine the circadian misalignment" class="https">determine the circadian misalignment</a>), but also <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="can be used for diagnosis with a sleep specialist" class="https">can be used for diagnosis with a sleep specialist</a> according to the official <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="USA" class="https">USA</a> (<a href="http://sleepeducation.org/docs/default-document-library/crswd-draft-executive-summary.pdf?sfvrsn=2" title="executive summary here" class="http">executive summary here</a>) and <a href="https://doi.org/10.1177%2F0269881119855343" title="UK guidelines" class="https">UK guidelines</a> and also is <a href="https://link.springer.com/article/10.1007/s11818-019-00215-x" title="necessary to correctly time the only few treatment options" class="https">necessary to correctly time the only few treatment options</a> (see also <a href="https://www.ncbi.nlm.nih.gov/pubmed/31256786" title="here" class="https">here</a> and <a href="https://doi.org/10.1016/j.smrv.2013.12.001" title="here" class="https">here</a> and <a href="https://doi.org/10.5664/jcsm.7054" title="here" class="https">here</a>) that exist currently, as <a href="https://pubmed.ncbi.nlm.nih.gov/27611743/" title="sleep diaries are reliable estimators of the circadian rhythm" class="https">sleep diaries are reliable estimators of the circadian rhythm</a>. Indeed, due to the unstable nature of the sleep schedule of individuals with non-24, <a href="https://doi.org/10.5664/jcsm.7054" title="it may be necessary to adjust the timing of the therapies from day-to-day" class="https">it may be necessary to adjust the timing of the therapies from day-to-day</a>, or sometimes reduce/increase the dosage (eg, of melatonin) or duration (of light therapy). Sleep diary does not only allow to keep track of bedtime and wake up times, but also of sleep duration, which is a strong predictor of cognitive performance and mood during the day, as well as sleep pressure the next day/night, as too little sleep strongly indicates sleep deprivation, whereas a too long sleep indicates the body attempted to correct for previous sleep deprivation.
 </p>
 
 <p>
-The author strongly recommend the app Sleepmeter Free on Android and its widget to write a digital sleep log which will produce nice charts that are easier for humans to read. It can also be installed on a computer using the Bluestacks emulator.
+The author strongly recommends the app Sleepmeter Free on Android and its widget to write a digital sleep log which will produce nice <b>sleep charts that are easier for humans to read and hence for doctors to diagnose</b>. It can also be installed on a computer using the Bluestacks emulator.
 </p>
 
 <p>
@@ -499,7 +547,10 @@ Alternatively, <a href="https://pubmed.ncbi.nlm.nih.gov/29991437/" title="medica
 </p>
 
 <p>
-Some clinics propose to do a sleep study, either at home or at the clinic, which means it's necessary to sleep at the clinic. In one night clinical setting, only melatonin sampling and body temperature monitoring under a constantly dim-lit environment can be reliable measures and not activity or sleep based measures such as EEG, polysomnography or actigraphy. Indeed, due to the "<a href="https://www.sciencealert.com/here-s-why-we-sleep-so-badly-in-unfamiliar-beds" title="first night effect" class="https">first night effect</a>" (ie difficulty in sleeping in an unfamiliar environment), activity and sleep based measures won't be reliable since they only reflect the participant's sleep and hence will be majorly biased by the first night effect, they can only be used if the participant sleeps at home or <a href="https://www.sciencealert.com/here-s-why-we-sleep-so-badly-in-unfamiliar-beds" title="multiple nights at the clinic and the first night's measures are discarded" class="https">multiple nights at the clinic and the first night's measures are discarded</a>. However, melatonin and <a href="https://science.education.nih.gov/supplements/nih_sleep_curr-supp.pdf" title="body temperature reflect the circadian rhythm even when not sleeping" class="https">body temperature reflect the circadian rhythm even when not sleeping</a>, so the first night effect has negligible impact on these, but these measures are reliable <a href="https://pubmed.ncbi.nlm.nih.gov/9415953/" title="only when in a constantly dim lit environment, as light can suppress the circadian rhythmicity" class="https">only when in a constantly dim lit environment, as light can suppress the circadian rhythmicity</a>.
+Some clinics propose to do a sleep study with polysomnography, either at home with a home kit or at the clinic (the latter meaning it's necessary to sleep at the clinic). A sleep study allows to mostly assess if there is a sleep disorder and especially sleep apnea, but not circadian rhythm disorders since they are done only for one night, and circadian rhythm disorders are only revealed in multi-days patterns of sleep.<br>
+In addition, due to the "<a href="https://www.sciencealert.com/here-s-why-we-sleep-so-badly-in-unfamiliar-beds" title="first night effect" class="https">first night effect</a>" (ie difficulty in sleeping in an unfamiliar environment), activity and sleep based measures won't be reliable since they only reflect the participant's sleep and hence will be majorly biased by the first night effect, they can only be used if the participant sleeps at home or <a href="https://www.sciencealert.com/here-s-why-we-sleep-so-badly-in-unfamiliar-beds" title="multiple nights at the clinic and the first night's measures are discarded" class="https">multiple nights at the clinic and the first night's measures are discarded</a>. Furthermore, sleep clinics often have a defined schedule, so the patient has to fit in and come to sleep only under specific hours, which may not align with the patient's circadian rhythm's current phase, prevent the patient from sleeping when allowed to by the staff and appointment time.<br>
+Hence, <b>at-home sleep studies are more indicated to diagnose circadian rhythm disorders</b>, and they can also diagnose sleep apnea if present, and this eliminates the risk of not sleeping during the sleep study (the "first night effect"). The only advantage of at-clinic sleep study is to allow to differenciate between the different kinds of sleep apnea (obstructive sleep apnea - where the respiratory tract is mechanically obstructed - versus central sleep apnea - where the cause for sleep apnea is neurological). The best course of action in case of suspected circadian rhythm disorder is hence to first make the patient write a sleep diary, then if a sleep study is required to eliminate other causes of sleep disorders such as sleep apnea, an at-home sleep study should be done first and then only if sleep apnea is detected, an at-clinic sleep study can be done to discriminate the type of sleep apnea.<br>
+Doing an at-clinic sleep study as a first indication is a nonsence for circadian rhythm disorders which can only logically result in a lot of misdiagnoses or null results. There is one exception, being at-clinic sleep studies including melatonin sampling and body temperature monitoring under a constantly dim-lit environment, as they can be reliable measures of the circadian rhythm in a one night clinical setting, whereas activity and sleep quality based measures such as EEG, polysomnography or actigraphy cannot (at least in one night). In addition, melatonin and <a href="https://science.education.nih.gov/supplements/nih_sleep_curr-supp.pdf" title="body temperature reflect the circadian rhythm even when not sleeping" class="https">body temperature reflect the circadian rhythm even when not sleeping</a>, so the first night effect has negligible impact on these, but these measures are reliable <a href="https://pubmed.ncbi.nlm.nih.gov/9415953/" title="only when in a constantly dim lit environment, as light can suppress the circadian rhythmicity" class="https">only when in a constantly dim lit environment, as light can suppress the circadian rhythmicity</a>. However, even with melatonin sampling or body temperature monitoring, a one-night sleep study can only diagnose a delay in circadian phase, hence diagnose DSPD, but not the non-24 disorder since by definition the non-24 disorder needs to display a freerunning pattern over several days. Hence, <b>if a sleep study is required, prefer to conduct it over several days and at-home</b>.
 </p>
 
 <p>
@@ -507,7 +558,7 @@ Once you have at least a sleep diary of 2 weeks, look for a sleep specialist to 
 </p>
 
 <p>
-If the doctors you met shrugged off the sleep diary, that's a clear sign they are not properly trained to diagnose circadian rhythm disorders, as sleep diaries over at least 2 weeks are the primary way to diagnose circadian rhythm disorders according to <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="american" class="https">american</a> and <a href="https://doi.org/10.1177%2F0269881119855343" title="british guidelines" class="https">british guidelines</a> on circadian rhythm disorders diagnosis. Furthermore, the <a href="https://doi.org/10.5664/jcsm.7128" title="american guidelines on patient-generated health data (PGHD) using consumer-grade sleep technology such as fitbit or sleep diaries" class="https">american guidelines on patient-generated health data (PGHD) using consumer-grade sleep technology such as fitbit or sleep diaries</a> state that this data should be used to open dialogue with the patient, that the clinician should understand the data and that "clinicians should recognize the patient's use of consumer sleep technology as a commitment to focus on sleep wellness". In other words, handing over your sleep diary of at least 2 weeks should be sufficient for any properly trained sleep specialist to diagnose you if you have a circadian rhythm disorder, and should certainly never be shrugged off.
+If the doctors you met shrugged off the sleep diary, that's a clear sign <a href="https://doi.org/10.1111/j.1365-2869.2008.00721.x" title="they are not properly trained to diagnose circadian rhythm disorders" class="https">they are not properly trained to diagnose circadian rhythm disorders</a>, as sleep diaries over at least 2 weeks are the primary way to diagnose circadian rhythm disorders according to <a href="https://aasm.org/resources/clinicalguidelines/crswd-intrinsic.pdf" title="american" class="https">american</a> and <a href="https://doi.org/10.1177%2F0269881119855343" title="british guidelines" class="https">british guidelines</a> on circadian rhythm disorders diagnosis. Furthermore, the <a href="https://doi.org/10.5664/jcsm.7128" title="american guidelines on patient-generated health data (PGHD) using consumer-grade sleep technology such as fitbit or sleep diaries" class="https">american guidelines on patient-generated health data (PGHD) using consumer-grade sleep technology such as fitbit or sleep diaries</a> state that this data should be used to (at least) open dialogue with the patient, that the clinician should understand the data and that "clinicians should recognize the patient's use of consumer sleep technology as a commitment to focus on sleep wellness". In other words, handing over your sleep diary of at least 2 weeks should be sufficient for any properly trained sleep specialist to diagnose you if you have a circadian rhythm disorder, should be considered an indication of your motivation to get better, and should certainly never be shrugged off.
 </p>
 
 <p>
@@ -1847,9 +1898,10 @@ If the therapy works and your circadian rhythm gets entrained, in practice slip 
 <p>
 Standard reentrainment protocol: this is the protocol that has shown the most effectiveness to reentrain the author's circadian rhythm in case of spontaneous or externally caused disentrainment. The reentrainment usually completes under a week and has been used to phase advance up to -6h.<br>
 <ol type="1" start="1">
-<li><b>The top priority is to avoid and recover from further sleep deprivation</b> and recover any sleep whenever you can, especially <b>by long napping whenever you can </b>(ie, for 2+h) and as early in the day as possible (ie, so as to leave some time for sleep pressure to build up before the next night), try to go to sleep whenever you feel tired the next night, etc.
+<li><b>The top priority is to avoid and recover from further sleep deprivation</b> and recover any sleep whenever you can, especially <b>by long napping whenever you can </b>(ie, for 2+h) and as early in the day as possible (ie, so as to leave some time for sleep pressure to build up before the next night), try to go to sleep whenever you feel tired the next night, etc. The only solution to the lack of sleep is to sleep, there is no replacement.
 <ul>
 <li>But don't stay in bed all day either if you can't sleep! Wake up, do some stuff and allow yourself to come back to bed for a nap whenever you feel like it. This is necessary because sleep deprivation reduces the effect of the zeitgebers and hence of the entrainment therapies, as well as make sleep more chaotic by disrupting the sleep homeostasis.</li>
+<li>Light therapy and caffeine and others psychostimulants can boost your energy levels, but it can not replace sleep, so if you are sleep deprived, you will still feel sleepy, no matter what. Hence, it can happen that you feel the urge to take a nap during your light therapy session if you slept a short/half night prior, that's normal and if you can afford a nap then do it, this will not shift your circadian rhythm (just reduce your sleep pressure but there are ways around and napping allows to reduce dopamine levels which can prevent sleeping, so all in all napping does not impair the ability to sleep the next biological night, and it reduces sleep deprivation in any case so that's a win-win).</li>
 </ul>
 </li>
 <li>Adapt the timing for melatonin to a later time relatively to your new (later) wake up time. The timing will be readjusted to an earlier time when reentrainment will be completed.</li>
@@ -1870,6 +1922,36 @@ For other issues, here are common scenarios and solutions:<br>
 <li>What if you did not sleep enough or at the wrong time for a few days? Then it will take a few days of sleep a full night and under your biological time (circadian alignment) to clear up the residual sleep deprivation and brain fog, these won't go away the first day you sleep sufficiently, there is some inertia due to the accumulation of sleep deprivation/debt.</li>
 <li>How many days of light therapy or melatonin can be missed? Although it takes about 10 days for freerunning to fully take effect again, missing on light therapy will already wear off entrainment stability and reduce vigilance under just a few days of missing light therapy. As a rule, 1 day is generally ok, 2 days is risky, more is asking for troubles, similarly to birth control pills (both playing on hormonal signaling).</li>
 </ul>
+</p>
+
+<h4>How to wake up earlier and earlier</h4>
+
+<p>
+As a prerequisite, it's necessary to be entrained to avoid freerunning. Once your sleep, and primarily your wake up time, is stabilized and hence you are entrained, the following can be applied to adjust the sleep and wake times to an earlier time (instead of having to freerun all the way around the clock).
+</p>
+
+<p>
+First, extend the duration of the light therapy session, by adding 1 or 2h compared to what you usually do for entrainment. For example, the author needs about 3-4h of light therapy every day to stay entrained, so that to wake up earlier, the author uses 4-5.5h of light therapy. If you do not use light therapy for your entrainment, then just use 1-2h of light therapy to wake up earlier (but this may take more than a couple of days due to the time necessary for the photic history to settle in, you may have to wait a week or more for the first effects).
+</p>
+
+<p>
+Secondly, wait a few days, about 2-3 days. During this time, try to pay attention to when you feel sleepiness and when you wake up. After 2-3 days, your wake up time should suddenly move 1h30 earlier than usual, which is a sign the extended light therapy session was effective to phase advance more the circadian rhythm.
+</p>
+
+<p>
+When this happens, you can take melatonin 1h30 earlier as well, to match your new wake up time. The author found that advancing melatonin administration in synchronization (or consecutively) with light therapy was necessary to maintain the new earlier wake up time (although the wake up time foremost happens because of extended light therapy exposure).
+</p>
+
+<p>
+Finally, keep in mind that changes in your wake up and fall asleep times happen in ultradian cycles increment of about 1h30-2h, what is called "sleep gates". Hence, it is useless to try to progressively sleep 15min earlier everyday, because then you would try to sleep in-between 2 sleep gates that are 1h30-2h apart, which is not only ineffective but may develop insomnia as then you'll stay longer awake in bed until the next sleep gate comes. Thus, prefer to first use very long light therapy to induce a change in your circadian rhythm first, and then leverage this by paying attention to the sleep gates and try to sleep at the previous sleep gate before the one you usually sleep in. For example, if you usually sleep at 5am, after a few days of longer light therapy you should also feel sleepy at 3h30, and if so, just try to sleep, if it works you'll likely be able to stay entrained at this new time.
+</p>
+
+<p>
+Also, pay attention to the 2 major sleep gate, the siesta one in the biological afternoon, about 12h after your usual fall asleep time of your biological night. For example if you usually sleep at 5am, you'll feel a dip in your energy at around 5pm, the time of the siesta. This is very informative as this indicates when your next biological night is likely to happen. For example, if you feel the energy dip at 3.30pm, while usually you sleep at 5am, then this is a good indication that tonight you'll likely be able to sleep at 3.30am instead of 5am (ie, sleeping at the previous sleep gate, since the siesta happened earlier than usually, a clue that your circadian rhythm has indeed advanced).
+</p>
+
+<p>
+Once this process worked, you can continue it and repeat until you wake up as early as you wish.
 </p>
 
 <h4>To nap or not to nap?</h4>
