@@ -17,8 +17,8 @@
     
     <!-- !! Different stylesheets for different screen sizes. Adapt to your likening-->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
-    <link rel="stylesheet" media="screen and (min-width: 741px)" href=./resources/style.css>
-    <link rel="stylesheet" media="screen and (max-width: 740px)" href=./resources/style_mobile.css>
+    <link rel="stylesheet" media="screen and (min-width: 741px)" href=/resources/style.css>
+    <link rel="stylesheet" media="screen and (max-width: 740px)" href=/resources/style_mobile.css>
 
 </head>
 <body onload="$.mobile.silentScroll(window.scrollY);" <!-- fix for jquery-mobile always scrolling to top at loading, see https://stackoverflow.com/questions/15255719/jquery-mobile-prevent-scroll-to-top-before-page-transition --> > 
@@ -1832,7 +1832,7 @@ Long duration. The clinician must have a reasonable estimate of how often the sy
 <li>another confirmation: "Simply touching a 1-Wire® probe to the DS1921H reveals the surrounding temperature in the range of 15–46°C, with an accuracy of ±1°C and resolution of 0.125°C." Current Developments in Wearable Thermometers, 2018 <a href="https://www.jstage.jst.go.jp/article/abe/7/0/7_7_88/_pdf" title="https://www.jstage.jst.go.jp/article/abe/7/0/7_7_88/_pdf" class="https">https://www.jstage.jst.go.jp/article/abe/7/0/7_7_88/_pdf</a> — ie, it's the same side to transfer data on the bluedot receiver and to sense temperature.</li>
 </ul>
 </li>
-<li>Also tested on 14 body sites on human skin and sudden ambient temperature change: "Thus, the iButtons appear to react slower than thermocouples. The differences were clearly smaller in the hot environment compared to the cold situation. Overall, the mean skin temperature determined using the 14 iButtons differed 0.3 ± 0.65 °C from the temperature determined using the 14 thermocouples. The mean skin temperature estimated using four versus 14 thermocouples according to ISO 9886 revealed a difference of 0.4 °C. This indicates that the difference between iButtons and thermocouples is in the same range as the difference between using four or 14 thermocouples to assess skin temperature. [...] The temperature yielded by the thermocouples was closer to ambient temperature than the iButton temperature (Fig. 4). [...] Thus, the temperature differences between the thermocouples and iButtons are larger soon after ambient condition changes. The thermal inertia delays the response, and errors up to 1 °C may occur under realistic circumstances."</li>
+<li>Also <b>tested on 14 body sites on human skin</b> and sudden ambient temperature change: "Thus, the iButtons appear to react slower than thermocouples. The differences were clearly smaller in the hot environment compared to the cold situation. Overall, the mean skin temperature determined using the 14 iButtons differed 0.3 ± 0.65 °C from the temperature determined using the 14 thermocouples. The mean skin temperature estimated using four versus 14 thermocouples according to ISO 9886 revealed a difference of 0.4 °C. This indicates that the difference between iButtons and thermocouples is in the same range as the difference between using four or 14 thermocouples to assess skin temperature. [...] The temperature yielded by the thermocouples was closer to ambient temperature than the iButton temperature (Fig. 4). [...] Thus, the temperature differences between the thermocouples and iButtons are larger soon after ambient condition changes. The thermal inertia delays the response, and errors up to 1 °C may occur under realistic circumstances."</li>
 <li>exercise not necessary for circadian rhythm + <b>causal link between core body temperature and circadian rhythm</b>: "<b>The 24-h rhythm in core body temperature is the result of differential 24-h rhythms in heat production and heat loss.</b> It has been demonstrated that under strictly controlled so-called ‘<b>constant routine’</b> conditions, in which subjects remain awake in a fixed semi-supine condition without physical activity and with food and drinks taken in small portions throughout the day and night, the core temperature rhythm remains. Furthermore, <b>the core temperature rhythm has been shown to result mostly from the circadian rhythm in heat loss, and to a lesser extent from changes in heat production [12]. Dry heat loss is caused by increased skin blood flow, allowing the dissipation of heat from the warm blood to the cooler environment.</b> Although the iButton is not suitable for core body temperature assessment in humans, the assessment of temperature at multiple sites of the skin provides a reliable estimate of heat loss [12,13], suggesting a role for the iButton in long-term studies on the circadian variation in skin temperature and heat-loss which is responsible for an important part of the circadian variation in core body temperature."</li>
 <li>"The value of skin temperature assessment extends to sleep research, because <b>endogenous skin warming, which results from increased skin blood flow, is functionally linked to sleep propensity</b>. In addition, exogenous skin warming in the thermoneutral, comfortable range has a strong impact on sleep propensity [7,14,15]. Therefore, the feasibility of using multiple iButtons in skin temperature studies on circadian rhythms and sleep performed outside the laboratory was investigated."</li>
 <li>Use 2 sensors: proximal AND distal sensors, 2 sensor, and the difference will show when is the circadian rhythm. TODO CRITICAL: find again other study explaining why proximal vs distal explains the circadian rhythm (because of heat evaporation etc): "the distal to proximal skin temperature gradient (DPG) is shown on a separate axis. Note that the marked and simultaneous nocturnal elevation of both proximal and distal temperature hardly ever occurs during wakefulness, indicative of a different thermoregulatory state during the sleep period. Note furthermore the negative correlation between activity level and skin temperatures, which is quite the reverse of the documented positive association of activity level and core body temperature."</li>
@@ -2214,6 +2214,53 @@ For sleep studies, actigraphy should be combined with a light sensor to measure 
 <li>Need electronic board with a battery, internal storage memory and bluetooth LE, and if possible circuitpython to program it, and wear as pendant (so no need to make it waterproof or what, the casing will be super easy): BEST REF: Comparisons of three practical field devices used to measure personal light exposures and activity levels, 2013 <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3892948/" title="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3892948/" class="https">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3892948/</a></li>
 <li>or PyBoard <a href="https://github.com/micropython/micropython" title="https://github.com/micropython/micropython" class="https">https://github.com/micropython/micropython</a></li>
 <li>ulab or numpy are supported to do vector calculations fast: <a href="https://learn.adafruit.com/ulab-crunch-numbers-fast-with-circuitpython" title="https://learn.adafruit.com/ulab-crunch-numbers-fast-with-circuitpython" class="https">https://learn.adafruit.com/ulab-crunch-numbers-fast-with-circuitpython</a></li>
+<li>BEST SOURCECODE see:
+<ul>
+<li><a href="https://github.com/cavemoa/Feather-M0-HighAccuracy-TempLogger" title="https://github.com/cavemoa/Feather-M0-HighAccuracy-TempLogger" class="https">https://github.com/cavemoa/Feather-M0-HighAccuracy-TempLogger</a></li>
+<li><a href="https://github.com/cavemoa/Feather-M0-Adalogger" title="https://github.com/cavemoa/Feather-M0-Adalogger" class="https">https://github.com/cavemoa/Feather-M0-Adalogger</a></li>
+</ul>
+</li>
+<li>Alternative: colorimeter: <a href="https://iorodeo.com/collections/open-source-colorimeter/products/educational-colorimeter-kit?variant=12389903622" title="https://iorodeo.com/collections/open-source-colorimeter/products/educational-colorimeter-kit?variant=12389903622" class="https">https://iorodeo.com/collections/open-source-colorimeter/products/educational-colorimeter-kit?variant=12389903622</a>
+<ul>
+<li><a href="http://blog.our-sci.net/tag/spectrometer/" title="http://blog.our-sci.net/tag/spectrometer/" class="http">http://blog.our-sci.net/tag/spectrometer/</a></li>
+</ul></li>
+</ul>
+</li>
+<li>myspectral.com's Spectruino and Lumini-T
+<ul>
+<li>Semi-opensource professional-grade spectrometer! (software is opensource, not the hardware)
+<ul>
+<li>But it says it's an opensource spectrometer! <a href="https://myspectral.com/publication/book-open-source-lab/" title="https://myspectral.com/publication/book-open-source-lab/" class="https">https://myspectral.com/publication/book-open-source-lab/</a></li>
+<li>But here it says it's partially opensource: <a href="http://what-when-how.com/Tutorial/topic-113r37/Open-Source-Lab-How-to-Build-Your-Own-Hardware-and-Reduce-Research-Costs-257.html" title="http://what-when-how.com/Tutorial/topic-113r37/Open-Source-Lab-How-to-Build-Your-Own-Hardware-and-Reduce-Research-Costs-257.html" class="http">http://what-when-how.com/Tutorial/topic-113r37/Open-Source-Lab-How-to-Build-Your-Own-Hardware-and-Reduce-Research-Costs-257.html</a></li>
+</ul>
+</li>
+<li><a href="https://myspectral.com/project/spectruino-three/" title="https://myspectral.com/project/spectruino-three/" class="https">https://myspectral.com/project/spectruino-three/</a></li>
+<li><a href="https://myspectral.com/project/lumini-t/" title="https://myspectral.com/project/lumini-t/" class="https">https://myspectral.com/project/lumini-t/</a></li>
+<li>Sourcecode for analysis:
+<ul>
+<li><a href="https://github.com/methoxid/mySight" title="https://github.com/methoxid/mySight" class="https">https://github.com/methoxid/mySight</a></li>
+<li><a href="https://gitlab.com/myspectralcom/mysight3/" title="https://gitlab.com/myspectralcom/mysight3/" class="https">https://gitlab.com/myspectralcom/mysight3/</a></li>
+<li><a href="https://gitlab.com/myspectral" title="https://gitlab.com/myspectral" class="https">https://gitlab.com/myspectral</a></li>
+<li><a href="https://myspectral.com/post/download/" title="https://myspectral.com/post/download/" class="https">https://myspectral.com/post/download/</a></li>
+</ul>
+</li>
+<li>Alternatives: <a href="https://hackteria.org/wiki/DIY_spectroscopy" title="https://hackteria.org/wiki/DIY_spectroscopy" class="https">https://hackteria.org/wiki/DIY_spectroscopy</a>
+<ul>
+<li>Cost: $411 according to <a href="http://blog.our-sci.net/tag/spectrometer/" title="http://blog.our-sci.net/tag/spectrometer/" class="http">http://blog.our-sci.net/tag/spectrometer/</a></li>
+</ul></li>
+</ul>
+</li>
+<li><b>BEST: ACM KRONOWISE® 2.0 watch, all-in-one system for circadian rhythm study and assessment</b>, combined with the Circadianware platform for light sensing, wrist skin temperature and 3-axis actigraphy!
+<ul>
+<li>Official website: <a href="http://www.kronohealth.com/productos-y-servicios/" title="http://www.kronohealth.com/productos-y-servicios/" class="http">http://www.kronohealth.com/productos-y-servicios/</a>
+<ul>
+<li>Battery duration and data storage: 1 week!</li>
+</ul>
+</li>
+<li>For light sensors: <a href="https://www.researchgate.net/figure/Kronowise-R-ACM-device_fig1_334043969" title="https://www.researchgate.net/figure/Kronowise-R-ACM-device_fig1_334043969" class="https">https://www.researchgate.net/figure/Kronowise-R-ACM-device_fig1_334043969</a> and <a href="https://www.researchgate.net/publication/334043969_Determining_Light_Intensity_Timing_and_Type_of_Visible_and_Circadian_Light_From_an_Ambulatory_Circadian_Monitoring_Device" title="https://www.researchgate.net/publication/334043969_Determining_Light_Intensity_Timing_and_Type_of_Visible_and_Circadian_Light_From_an_Ambulatory_Circadian_Monitoring_Device" class="https">https://www.researchgate.net/publication/334043969_Determining_Light_Intensity_Timing_and_Type_of_Visible_and_Circadian_Light_From_an_Ambulatory_Circadian_Monitoring_Device</a></li>
+<li>Circadianware platform: <a href="https://kronowizard.um.es/kronowizard/plataforma.seam" title="https://kronowizard.um.es/kronowizard/plataforma.seam" class="https">https://kronowizard.um.es/kronowizard/plataforma.seam</a> (shows some references)</li>
+<li>There are soooo many studies using it! Hence so many validations! including <a href="https://doi.org/10.3389/fneur.2019.00356" title="https://doi.org/10.3389/fneur.2019.00356" class="https">https://doi.org/10.3389/fneur.2019.00356</a> and <a href="https://ec.europa.eu/eip/ageing/commitments-tracker/a3/circadian-health-physical-activity-and-pattern-eating-habits-frailty_en" title="https://ec.europa.eu/eip/ageing/commitments-tracker/a3/circadian-health-physical-activity-and-pattern-eating-habits-frailty_en" class="https">https://ec.europa.eu/eip/ageing/commitments-tracker/a3/circadian-health-physical-activity-and-pattern-eating-habits-frailty_en</a></li>
+<li>But likely only accessible to (spanish) researchers...</li>
 </ul>
 </li>
 <li>Shimmer3 IMU Unit : 10 axis actigraphy for 359 euros <a href="http://www.shimmersensing.com/products/shimmer3-imu-sensor" title="http://www.shimmersensing.com/products/shimmer3-imu-sensor" class="http">http://www.shimmersensing.com/products/shimmer3-imu-sensor</a>
@@ -2468,7 +2515,28 @@ All devices measuring skin temperature from the limbs (fingers, wrist) are de fa
 <li>Alternatives: <a href="https://www.mobihealthnews.com/content/seven-ways-health-consumers-are-tracking-their-sleep" title="https://www.mobihealthnews.com/content/seven-ways-health-consumers-are-tracking-their-sleep" class="https">https://www.mobihealthnews.com/content/seven-ways-health-consumers-are-tracking-their-sleep</a></li>
 </ul>
 </li>
-<li>3M SpotOn, zero-heat-flux technology on forehead, lots of papers and institutions validating the method: <a href="http://cedit.aphp.fr/hospital-based-hta-levaluation-de-technologies-de-sante-a-lhopital/dispositif-de-mesure-de-la-temperature-corporelle-spoton/" title="http://cedit.aphp.fr/hospital-based-hta-levaluation-de-technologies-de-sante-a-lhopital/dispositif-de-mesure-de-la-temperature-corporelle-spoton/" class="http">http://cedit.aphp.fr/hospital-based-hta-levaluation-de-technologies-de-sante-a-lhopital/dispositif-de-mesure-de-la-temperature-corporelle-spoton/</a> and <a href="https://multimedia.3m.com/mws/media/878163O/spoton-system-brochure.pdf" title="https://multimedia.3m.com/mws/media/878163O/spoton-system-brochure.pdf" class="https">https://multimedia.3m.com/mws/media/878163O/spoton-system-brochure.pdf</a> - $275 in second-hand! <a href="https://med.equipment/3m-spoton-37000-p-n-370060-temperature-monitoring-system-monitor-9365.html" title="https://med.equipment/3m-spoton-37000-p-n-370060-temperature-monitoring-system-monitor-9365.html" class="https">https://med.equipment/3m-spoton-37000-p-n-370060-temperature-monitoring-system-monitor-9365.html</a> - not a wearable because need a monitor on the bedsite</li>
+<li><b>3M SpotOn</b>, zero-heat-flux technology on forehead, lots of papers and institutions validating the method: <a href="http://cedit.aphp.fr/hospital-based-hta-levaluation-de-technologies-de-sante-a-lhopital/dispositif-de-mesure-de-la-temperature-corporelle-spoton/" title="http://cedit.aphp.fr/hospital-based-hta-levaluation-de-technologies-de-sante-a-lhopital/dispositif-de-mesure-de-la-temperature-corporelle-spoton/" class="http">http://cedit.aphp.fr/hospital-based-hta-levaluation-de-technologies-de-sante-a-lhopital/dispositif-de-mesure-de-la-temperature-corporelle-spoton/</a> and <a href="https://multimedia.3m.com/mws/media/878163O/spoton-system-brochure.pdf" title="https://multimedia.3m.com/mws/media/878163O/spoton-system-brochure.pdf" class="https">https://multimedia.3m.com/mws/media/878163O/spoton-system-brochure.pdf</a> - $275 in second-hand! <a href="https://med.equipment/3m-spoton-37000-p-n-370060-temperature-monitoring-system-monitor-9365.html" title="https://med.equipment/3m-spoton-37000-p-n-370060-temperature-monitoring-system-monitor-9365.html" class="https">https://med.equipment/3m-spoton-37000-p-n-370060-temperature-monitoring-system-monitor-9365.html</a> - not a wearable because need a monitor on the bedsite
+<ul>
+<li>New name: <b>3M Bair Hugger Temperature Monitoring</b>, it was renamed from SpotOn in 2016: <a href="https://www.nice.org.uk/advice/mib99/resources/bair-hugger-for-measuring-core-temperature-during-perioperative-care-pdf-63499476790213" title="https://www.nice.org.uk/advice/mib99/resources/bair-hugger-for-measuring-core-temperature-during-perioperative-care-pdf-63499476790213" class="https">https://www.nice.org.uk/advice/mib99/resources/bair-hugger-for-measuring-core-temperature-during-perioperative-care-pdf-63499476790213</a></li>
+<li>VALIDATION: by UK NICE: <a href="https://www.nice.org.uk/advice/mib99/resources/bair-hugger-for-measuring-core-temperature-during-perioperative-care-pdf-63499476790213" title="https://www.nice.org.uk/advice/mib99/resources/bair-hugger-for-measuring-core-temperature-during-perioperative-care-pdf-63499476790213" class="https">https://www.nice.org.uk/advice/mib99/resources/bair-hugger-for-measuring-core-temperature-during-perioperative-care-pdf-63499476790213</a>
+<ul>
+<li>"The cost of the Bair Hugger temperature monitoring system is £250 per unit (provided at no extra cost if enough consumables are bought) and the single-use sensors are £7.46 (exclusive of VAT). The resource impact is likely to be similar to standard care. <b>Invasive measures that directly estimate core temperature cost between £2 and £7 for single-patient use and between £103 and £160 for re-useable devices.</b>"</li>
+<li>"The control unit shows the patient's current temperature and a graphical display of up to 2 hours of previous temperature data. The current temperature can also be displayed on a patient vital signs monitor if connected by the optional cable. "</li>
+<li>How zero-heat-flux works, in layman terms: "The single-use sensor consists of a thermal insulator next to the skin that is covered by a flex circuit containing a heating element. The temperature of the sensor is regulated by the Bair Hugger temperature monitoring system in the control unit. The thermal insulator is designed to prevent heat loss to the environment. This establishes an isothermal pathway under the sensor, bringing the core temperature to the skin surface and enabling the temperature to be recorded and monitored. The sensor takes several minutes to reach this temperature balance. "</li>
+<li>"The company claims that by using a single sensor that stays on the patient, any variability in measurement between different healthcare professionals or monitoring devices is avoided."</li>
+<li>"Seven studies are summarised in this briefing, including over 513 patients (1 study did not report the number of patients and so the exact total is not clear). All studies compared the Bair Hugger temperature monitoring system with either invasive core temperature monitoring or minimally invasive temperature monitoring. The level of agreement between the devices was high. The manufacturer has re-branded the device since these studies were published but there have been no changes to the technology itself (previously known as SpotOn)."</li>
+</ul>
+</li>
+<li>Alternatives: Draeger TCore and Terumo CM-210 (CoreTemp)</li>
+</ul>
+</li>
+<li>BEST: DIY Zero-Heat-Flux sensors:
+<ul>
+<li>Foam-based sensor instead of sticky patch: <a href="https://doi.org/10.1109/BSN.2018.8329661" title="https://doi.org/10.1109/BSN.2018.8329661" class="https">https://doi.org/10.1109/BSN.2018.8329661</a></li>
+<li><a href="https://doi.org/10.11239/jsmbe.55Annual.221" title="https://doi.org/10.11239/jsmbe.55Annual.221" class="https">https://doi.org/10.11239/jsmbe.55Annual.221</a></li>
+<li>BEST TOSEE: infrared temperature sensor mimicking results with zero-heat-flux? An IR Sensor Based Smart System to Approximate Core Body Temperature, 2017 <a href="https://doi.org/10.1007/s10916-017-0770-z" title="https://doi.org/10.1007/s10916-017-0770-z" class="https">https://doi.org/10.1007/s10916-017-0770-z</a></li>
+</ul>
+</li>
 <li><a href="https://www.cbsquared.com/products/temperature-sensor-kit" title="https://www.cbsquared.com/products/temperature-sensor-kit" class="https">https://www.cbsquared.com/products/temperature-sensor-kit</a></li>
 <li>Ingestible thermometer e-pills
 <ul>
@@ -2526,6 +2594,13 @@ Rubia-Rubia, J., Arias, A., Sierra, A., &amp; Aguirre-Jaime, A. (2011). Measurem
 <li>Pros: real-time temperature, armpit temperature</li>
 <li>Cons: patch-based, for sleeping only and likely not 24h wear</li>
 <li>Alternative: Nurofen FeverSmart <a href="https://www.nurofenforchildren.co.uk/products/feversmart-temperature-monitor" title="https://www.nurofenforchildren.co.uk/products/feversmart-temperature-monitor" class="https">https://www.nurofenforchildren.co.uk/products/feversmart-temperature-monitor</a> for 50 pounds sampling rate 1 per minute, which looks exactly like VivaLNK's sensor (but the latter is FDA validated): <a href="https://www.vivalnk.com/product/temperature-sensor" title="https://www.vivalnk.com/product/temperature-sensor" class="https">https://www.vivalnk.com/product/temperature-sensor</a> or TempTraq <a href="https://www.temptraq.com/Home" title="https://www.temptraq.com/Home" class="https">https://www.temptraq.com/Home</a> or TempPal <a href="https://www.iweecare.com/EN/" title="https://www.iweecare.com/EN/" class="https">https://www.iweecare.com/EN/</a> or FeverSmart (similar name but different product) at $130 (sampling every 15min from screen captures, but <a href="https://play.google.com/store/apps/details?id=diff.com.feversmart&hl=en" title="android app is dead" class="https">android app is dead</a>): <a href="https://feversmart.com/" title="https://feversmart.com/" class="https">https://feversmart.com/</a></li>
+</ul>
+</li>
+<li>Warmie wearable temperature sensor, research project:
+<ul>
+<li><a href="https://www.warmie.eu/" title="https://www.warmie.eu/" class="https">https://www.warmie.eu/</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=cloud.proxi.warmie24" title="https://play.google.com/store/apps/details?id=cloud.proxi.warmie24" class="https">https://play.google.com/store/apps/details?id=cloud.proxi.warmie24</a></li>
+<li>Seems like there's no internal memory</li>
 </ul></li>
 </ul>
 </p>
@@ -2589,7 +2664,8 @@ These ECG devices use dry electrodes, which means they are in plastic or <a href
 <li>MoviSens EcgMove4: dry electrode chest strap single-lead ECG, 1024 Hz sampling rate with 2 weeks of internal storage, battery 3 days (rechargeable in 1h) and temperature sensor and 6-axis accelerometer (great for ECG denoising): <a href="https://www.movisens.com/en/products/ecg-sensor/" title="https://www.movisens.com/en/products/ecg-sensor/" class="https">https://www.movisens.com/en/products/ecg-sensor/</a>
 <ul>
 <li>With validation studies (refs are on the manufacturer's page)</li>
-<li>Price?</li>
+<li>Expensive price: 1.790,00 € for EcgMove4</li>
+<li>Can also be used with wet electrodes</li>
 </ul></li>
 </ul>
 *<b> BEST: Polar H10</b> records up to 30h on internal memory and 400h of battery in runtime (coin cell), and is a reference <a href="https://support.polar.com/en/support/how_long_a_training_session_can_i_record_with_h10" title="https://support.polar.com/en/support/how_long_a_training_session_can_i_record_with_h10" class="https">https://support.polar.com/en/support/how_long_a_training_session_can_i_record_with_h10</a><br>
@@ -2690,7 +2766,7 @@ These ECG devices use dry electrodes, which means they are in plastic or <a href
 <li>"The sensor wireless communication is sensitive to 5GHz radio signal interference. If there is difficulty finding the sensor try a different location with less signal disturbance."</li>
 <li>"NOTE! When the sensor memory is full, the sensor will begin overwriting the old recordings with new ones, effectively destroying the old recordings. Remember to transfer the recordings from the sensor to the mobile device after recording for 24 hours if you don't want to lose any recordings."</li>
 <li>BEST: can export recording to computer WITHOUT NEEDING CLOUD! "Select ‘SHARE EDF VIA BLUETOOTH’ to access the ECG recording in EDF+ format and transfer it to another device, for example a computer. You must pair your computer with the mobile device and set it to receive files via Bluetooth. The EDF+ file can be opened with various programs that can be downloaded from the internet, for example from physionet.org."</li>
-<li>BESTTUTO: visual quality check of chest strap electrodes placement: "6.6 Identifying proper ECG waveform" (mirror: <a href="https://web.archive.org/web/20201016192010/http://www.vitalsignum.com/wp-content/uploads/2020/10/VS-2019-008-rev2.3-Beat2Phone-ECG-Instruction-Manual.pdf" title="https://web.archive.org/web/20201016192010/http://www.vitalsignum.com/wp-content/uploads/2020/10/VS-2019-008-rev2.3-Beat2Phone-ECG-Instruction-Manual.pdf" class="https">https://web.archive.org/web/20201016192010/http://www.vitalsignum.com/wp-content/uploads/2020/10/VS-2019-008-rev2.3-Beat2Phone-ECG-Instruction-Manual.pdf</a> )</li>
+<li><b>BESTTUTO: visual quality check of data to ensure proper chest strap electrodes placement:</b> "6.6 Identifying proper ECG waveform" (mirror: <a href="https://web.archive.org/web/20201023000548/http://www.vitalsignum.com/wp-content/uploads/2020/10/VS-2019-008-rev2.3-Beat2Phone-ECG-Instruction-Manual.pdf" title="https://web.archive.org/web/20201023000548/http://www.vitalsignum.com/wp-content/uploads/2020/10/VS-2019-008-rev2.3-Beat2Phone-ECG-Instruction-Manual.pdf" class="https">https://web.archive.org/web/20201023000548/http://www.vitalsignum.com/wp-content/uploads/2020/10/VS-2019-008-rev2.3-Beat2Phone-ECG-Instruction-Manual.pdf</a> ) (local mirror: <a href="./SleepNon24_files/VS-2019-008-rev2.3-Beat2Phone-ECG-Instruction-Manual.pdf" title=".\VS-2019-008-rev2.3-Beat2Phone-ECG-Instruction-Manual.pdf" class="file">.\VS-2019-008-rev2.3-Beat2Phone-ECG-Instruction-Manual.pdf</a> )</li>
 </ul>
 </li>
 <li>Rechargeable battery but can wear out with time</li>
@@ -2843,9 +2919,9 @@ Wet electrodes ECG monitors are the gold standard of ECG recording, they provide
 <li>554 euros for dev kit with dock <a href="http://www.shimmersensing.com//products/ecg-development-kit" title="http://www.shimmersensing.com//products/ecg-development-kit" class="http">http://www.shimmersensing.com//products/ecg-development-kit</a></li>
 <li>Shimmer firmware is available open source on Github. <a href="https://github.com/ShimmerResearch/shimmer3/tree/master" title="https://github.com/ShimmerResearch/shimmer3/tree/master" class="https">https://github.com/ShimmerResearch/shimmer3/tree/master</a></li>
 <li>Synchronization with complimentary systems via real-time clock configuration.</li>
-<li>BESTTUTO: "five-wire, four-lead ECG Unit" <a href="http://www.shimmersensing.com/images/uploads/docs/ECG_User_Guide_Rev1.12.pdf" title="http://www.shimmersensing.com/images/uploads/docs/ECG_User_Guide_Rev1.12.pdf" class="http">http://www.shimmersensing.com/images/uploads/docs/ECG_User_Guide_Rev1.12.pdf</a>
+<li>BESTTUTO: technicals about ECG data quality: section "4.1 Best Practice on How to Acquire a High Quality ECG signal" of <a href="http://www.shimmersensing.com/images/uploads/docs/ECG_User_Guide_Rev1.12.pdf" title="http://www.shimmersensing.com/images/uploads/docs/ECG_User_Guide_Rev1.12.pdf" class="http">http://www.shimmersensing.com/images/uploads/docs/ECG_User_Guide_Rev1.12.pdf</a> (mirror: <a href="./SleepNon24_files/Shimmer3_ECG_User_Guide_Rev1.12.pdf" title=".\Shimmer3_ECG_User_Guide_Rev1.12.pdf" class="file">.\Shimmer3_ECG_User_Guide_Rev1.12.pdf</a> )
 <ul>
-<li>BEST: "4.1 Best Practice on How to Acquire a High Quality ECG signal"</li>
+<li>"five-wire, four-lead ECG Unit"</li>
 <li>Skin preparation is not essential but it can improve signal quality (hair shaving, dirt particles removal etc).</li>
 <li>For clinical-grade ECG, 512Hz sampling rate is recommended -- but then only 3.5 days of recording...</li>
 <li>SD Card change allowed! "Whilst the Shimmer3 enclosures can be opened to allow users to change the SD card, it is important to note that the plastic enclosures are not designed for regular opening and closing. In particular, it is recommended that the screws not be removed and reinserted on a regular basis as damage to the plastic by over-use of the screw mechanism will occur."</li>
@@ -3327,6 +3403,12 @@ The first product of its kind is the KardiaMobile case or card (AliveCor), which
 <ul>
 <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6039119/" title="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6039119/" class="https">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6039119/</a></li>
 <li>Not exactly for HeartGuide, but similar concept: <a href="https://biomedical-engineering-online.biomedcentral.com/articles/10.1186/s12938-017-0317-z" title="https://biomedical-engineering-online.biomedcentral.com/articles/10.1186/s12938-017-0317-z" class="https">https://biomedical-engineering-online.biomedcentral.com/articles/10.1186/s12938-017-0317-z</a></li>
+</ul>
+</li>
+<li>Alternative: use iButtons to measure wrist skin temperature:
+<ul>
+<li>Wrist skin temperature, motor activity, and body position as determinants of the circadian pattern of blood pressure, 2012 <a href="https://pubmed.ncbi.nlm.nih.gov/22734575/" title="https://pubmed.ncbi.nlm.nih.gov/22734575/" class="https">https://pubmed.ncbi.nlm.nih.gov/22734575/</a></li>
+<li>Wrist skin temperature can be used to estimate blood pressure patterns! "Thus, these results suggest that the increase in WT produced by heat loss during the rest phase through peripheral skin blood vessels is the result of blood vessel vasodilatation reflexes in response to a shift from a standing to a supine position, together with shift in the circadian sympathetic/parasympathetic balance (nocturnal parasympathetic activation). In conclusion, WT could be considered as a potential new screening procedure to implement the diagnosis of non-dipping BP pattern."</li>
 </ul></li>
 </ul>
 </li>
@@ -5159,12 +5241,24 @@ source published (but no license): <a href="https://github.com/cmac2454/fresh-ey
 </ul></li>
 </ul>
 </li>
-<li>BEST CRITICAL TOREAD on circadian misalignment and gastric digestive issues and light therapy: "<b>Colonic motility also follows a circadian rhythm with reduced nocturnal activity. Healthy humans have normal bowel motility during the day, frequently following awakening or following a meal, with minimal activity during the night. Maladjusted circadian rhythms in the bowel have been linked to digestive pathologies, including constipation and irritable bowel syndrome.</b> Our advanced knowledge of the link between the circadian clock and gastrointestinal physiology provides potential therapeutic approaches for the treatment of gastrointestinal diseases. This review seeks to establish evidence for the correlation between circadian rhythm, bowel movements and digestive health, and examine the implications of disrupted circadian rhythms on gut physiology." review from 2020 <a href="https://pubmed.ncbi.nlm.nih.gov/32134798/" title="https://pubmed.ncbi.nlm.nih.gov/32134798/" class="https">https://pubmed.ncbi.nlm.nih.gov/32134798/</a>
+<li>BEST CRITICAL TOREAD on circadian misalignment and gastric digestive issues and light therapy: "<b>Disruption of Circadian Rhythms and Gut Motility - An Overview of Underlying Mechanisms and Associated Pathologies</b>", review 2020 <a href="https://pubmed.ncbi.nlm.nih.gov/32134798/" title="https://pubmed.ncbi.nlm.nih.gov/32134798/" class="https">https://pubmed.ncbi.nlm.nih.gov/32134798/</a> or <a href="https://doi.org/10.1097/MCG.0000000000001333" title="https://doi.org/10.1097/MCG.0000000000001333" class="https">https://doi.org/10.1097/MCG.0000000000001333</a>
 <ul>
+<li>"<b>Colonic motility also follows a circadian rhythm with reduced nocturnal activity. Healthy humans have normal bowel motility during the day, frequently following awakening or following a meal, with minimal activity during the night. Maladjusted circadian rhythms in the bowel have been linked to digestive pathologies, including constipation and irritable bowel syndrome.</b> Our advanced knowledge of the link between the circadian clock and gastrointestinal physiology provides potential therapeutic approaches for the treatment of gastrointestinal diseases. This review seeks to establish evidence for the correlation between circadian rhythm, bowel movements and digestive health, and examine the implications of disrupted circadian rhythms on gut physiology."</li>
 <li>Aberrant light exposure and circadian misalignment leads to compromised digestive system?</li>
 <li><img src="./SleepNon24_files/pasted_image059.png" width="500"> under creative commons 4.0 CC-BY-NC-ND <a href="https://pubmed.ncbi.nlm.nih.gov/32134798/" title="https://pubmed.ncbi.nlm.nih.gov/32134798/" class="https">https://pubmed.ncbi.nlm.nih.gov/32134798/</a></li>
 <li>BEST CRITICAL: "evidence suggests that <b>exposure to dim-light conditions during the daytime suppresses the digestion of an evening meal, resulting in malabsorption of dietary components</b>.2" → photic history and aberrant light exposure also affects the digestive system! (and hence metabolism)</li>
 <li>TO COMBINE TOREAD: about circadian rhythm and digestive issues: "The biological clock plays a crucial role in maintaining GI metabolic homeostasis; circadian disruption is implicated in various GI and liver pathologies, metabolic diseases, alcoholrelated injuries, and cancers. In light of the growing understanding of circadian regulation in GI health and disease, preventive and therapeutic implications from a chronobiological perspective are anticipated. Identifying factors that can cause central–peripheral circadian misalignment could help us to risk stratify at-risk individuals." <a href="https://www.gastrojournal.org/article/S0016-5085(16)34832-6/pdf" title="https://www.gastrojournal.org/article/S0016-5085(16)34832-6/pdf" class="https">https://www.gastrojournal.org/article/S0016-5085(16)34832-6/pdf</a></li>
+<li>TOREAD: Melatonin's role as a co-adjuvant treatment in colonic diseases: A review <a href="https://doi.org/10.1016/j.lfs.2016.11.031" title="https://doi.org/10.1016/j.lfs.2016.11.031" class="https">https://doi.org/10.1016/j.lfs.2016.11.031</a></li>
+<li>TOREAD: Implications of Melatonin Therapy in Irritable Bowel Syndrome: A Systematic Review <a href="https://doi.org/10.2174/138161210794079254" title="https://doi.org/10.2174/138161210794079254" class="https">https://doi.org/10.2174/138161210794079254</a>
+<ul>
+<li>"In conclusion, melatonin can be a target of interest in IBS because of its potentials to regulate GI motility."</li>
+</ul>
+</li>
+<li>TO COMBINE with:
+<ul>
+<li>BEST: Feeding Rhythms and the Circadian Regulation of Metabolism. 2020 <a href="https://www.ncbi.nlm.nih.gov/pubmed/32363197" title="https://www.ncbi.nlm.nih.gov/pubmed/32363197" class="https">https://www.ncbi.nlm.nih.gov/pubmed/32363197</a> "<b>The timing of food intake is highlighted as a powerful environmental cue with the potential to destroy or restore the synchrony of circadian rhythms in metabolism.</b>"</li>
+<li>BEST CRITICAL TOREAD: review of macronutrients and micronutrients impacts on circadian rhythm, to design a diet for crswd? <a href="https://www.ncbi.nlm.nih.gov/pubmed/26977390" title="https://www.ncbi.nlm.nih.gov/pubmed/26977390" class="https">https://www.ncbi.nlm.nih.gov/pubmed/26977390</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </p>
