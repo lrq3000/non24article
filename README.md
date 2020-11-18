@@ -24,7 +24,7 @@ If you reuse some of my material, please feel free to use it under Creative Comm
 
 I am also open to collaborations (eg, to design a group study on healthy volunteers and/or patients with sighted non-24).
 
-A (messy) side notebook with lots of references along with an older draft protocol (based on chronotherapy and melatonin - which did not work) is available here: To view the draft, use this HTML previewer: https://lrq3000.github.io/non24article/SleepNon24.html
+A (messy) side notebook with lots of references along with an older draft protocol (based on chronotherapy and melatonin - which did not work) is available here: To view the draft, use this HTML previewer: https://lrq3000.github.io/non24article/other_docs/SleepNon24.html
 
 ## Vitals dataset
 
