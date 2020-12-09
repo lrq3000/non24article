@@ -17,8 +17,8 @@
     
     <!-- !! Different stylesheets for different screen sizes. Adapt to your likening-->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
-    <link rel="stylesheet" media="screen and (min-width: 741px)" href=/resources/style.css>
-    <link rel="stylesheet" media="screen and (max-width: 740px)" href=/resources/style_mobile.css>
+    <link rel="stylesheet" media="screen and (min-width: 741px)" href=../resources/style.css>
+    <link rel="stylesheet" media="screen and (max-width: 740px)" href=../resources/style_mobile.css>
 
 </head>
 <body onload="$.mobile.silentScroll(window.scrollY);" <!-- fix for jquery-mobile always scrolling to top at loading, see https://stackoverflow.com/questions/15255719/jquery-mobile-prevent-scroll-to-top-before-page-transition --> > 
@@ -75,6 +75,39 @@ TODO:<br>
 <li>BEST IDEA WEARABLE ME ALL-IN-ONE: make my own ECG optical + thermistor + 3-axis accelerometer on armband with microsd card and bluetooth streaming using an arduino-like board with breakouts, this should be sufficient to capture skin temperature + RR intervals (heart rate and heart rate variability) + activity (sleep-wake phases - actigraphy). First confirm that these measures work to monitor the circadian rhythm (and determine with what algorithms), then I can try to make this all-in-one wearable with both data storage for offline analysis and online streaming via bluetooth for users to monitor in real-time their circadian rhythm (and stream the history too this is necessary).
 <ul>
 <li>IT EXISTS! Except for ECG. Recommend for researchers this all-in-one system: <b>ACM KRONOWISE® 2.0 watch, all-in-one system for circadian rhythm study and assessment</b>, combined with the Circadianware platform for light sensing, wrist skin temperature and 3-axis actigraphy! Used in lots of research studies already with Circadianware software: <a href="http://www.kronohealth.com/productos-y-servicios/" title="http://www.kronohealth.com/productos-y-servicios/" class="http">http://www.kronohealth.com/productos-y-servicios/</a></li>
+</ul>
+</li>
+<li>CircaLog</li>
+<li>Polar H10 ECG and accelerometer BLE receiver Android app long term recording
+<ul>
+<li>like the one I use currently but with auto retry if communication failed at some point, will retry until connection is reestablished or logging is stopped</li>
+<li>save in csv file along the way, so that if crash then no issue it's already saved</li>
+<li>update battery periodically (old app only updates once when connecting to the H10)</li>
+<li>use the android sdk provided by Polar, better to code a native android app in Java to reduce memory and cpu consumption, a non-native Python or other app will consume more phone battery</li>
+<li>smartphone receiver app advantages: full ECG + accel data recording, restart automatically, long battery if using Realme 6i, but sometimes the signal can be cut and a dedicated phone to receive the data is necessary (to avoid aggressive background app kill by Android OS).</li>
+<li>or can also record 1Hz RR et HR on internal memory. But how long the internal memory would last? But still for people without a dedicated phone, it would be better than nothing, if at least 24h would be great, need to test.</li>
+<li>need to code in java, because in python kivy it will be using opengl and so use much more battery</li>
+<li>Docs and tools:
+<ul>
+<li><a href="https://github.com/watsonix/node-ble-hr" title="https://github.com/watsonix/node-ble-hr" class="https">https://github.com/watsonix/node-ble-hr</a></li>
+<li><a href="https://github.com/polarofficial/polar-ble-sdk/tree/master/examples/example-android/androidBleSdkTestApp" title="https://github.com/polarofficial/polar-ble-sdk/tree/master/examples/example-android/androidBleSdkTestApp" class="https">https://github.com/polarofficial/polar-ble-sdk/tree/master/examples/example-android/androidBleSdkTestApp</a></li>
+<li><a href="https://web.archive.org/web/20190621133931/https://developer.polar.com/wiki/H6,_H7_and_H10_Heart_rate_sensors" title="https://web.archive.org/web/20190621133931/https://developer.polar.com/wiki/H6,_H7_and_H10_Heart_rate_sensors" class="https">https://web.archive.org/web/20190621133931/https://developer.polar.com/wiki/H6,_H7_and_H10_Heart_rate_sensors</a></li>
+<li><a href="https://web.archive.org/web/20190621133931/https://developer.polar.com/wiki/H6,_H7_and_H10_Heart_rate_sensors" title="https://web.archive.org/web/20190621133931/https://developer.polar.com/wiki/H6,_H7_and_H10_Heart_rate_sensors" class="https">https://web.archive.org/web/20190621133931/https://developer.polar.com/wiki/H6,_H7_and_H10_Heart_rate_sensors</a></li>
+<li><a href="https://blog.alikhalil.tech/2014/11/polar-h7-bluetooth-le-heart-rate-sensor-on-ubuntu-14-04/" title="https://blog.alikhalil.tech/2014/11/polar-h7-bluetooth-le-heart-rate-sensor-on-ubuntu-14-04/" class="https">https://blog.alikhalil.tech/2014/11/polar-h7-bluetooth-le-heart-rate-sensor-on-ubuntu-14-04/</a></li>
+</ul>
+</li>
+<li>RR intervals can have as many as 4 in one packet!
+<ul>
+<li>"Q: Why there are sometimes 0-4 RR-intervals? A: Bluetooth exchanges data around 1 s intervals and if your heart rate is around 60 bpm, then almost every RR-interval hits between data transmission. If you have heartrate eg. 40, then your RR-interval is over 1s =&gt; not every BLE packet contain RR-interval. Then if your heartrate is eg. 180, then there is at least two RR-intervals in BLE packet." <a href="https://play.google.com/store/apps/details?id=com.j_ware.polarsensorlogger" title="https://play.google.com/store/apps/details?id=com.j_ware.polarsensorlogger" class="https">https://play.google.com/store/apps/details?id=com.j_ware.polarsensorlogger</a></li>
+</ul>
+</li>
+<li>even if persistent mode, send taskbar notification and vibrate to signal that the device disconnected, maybe bad contact with chest belt electrodes and skin, so if we don't notify the user then they may acquire useless data.</li>
+</ul>
+</li>
+<li><b>MY OBSERVATIONS:</b>
+<ul>
+<li>GreenTEG Core: core temperature decreases and stays low when biological night or nap, but rises up when waking up in the middle of the night or when awake. A rise of core temperature (at an odd time such as before the usual time for the biological night) indicates an energy boost.</li>
+<li>ECG: heart rate low and stable when asleep, but starts to become higher and more variable in the last cycle or even before if sleeping outside of the biological night, may be usable as a metric to indicate if one is sleeping under the biological night?</li>
 </ul></li>
 </ul>
 </p>
@@ -380,7 +413,7 @@ Wearables list:<br>
 <li>they used the Kronowise watch for light sensing combined with an accelerometer on the arm and iButton for wrist skin temperature</li>
 </ul>
 </li>
-<li><b>BEST CRITICAL METHODS: Uncovering Different Masking Factors on Wrist Skin Temperature Rhythm in Free-Living Subjects, 2013</b> <a href="https://www.ncbi.nlm.nih.gov/pubmed/23577201" title="https://www.ncbi.nlm.nih.gov/pubmed/23577201" class="https">https://www.ncbi.nlm.nih.gov/pubmed/23577201</a>
+<li><b>BEST CRITICAL VALIDATION AND METHODS: Uncovering Different Masking Factors on Wrist Skin Temperature Rhythm in Free-Living Subjects, 2013</b> <a href="https://www.ncbi.nlm.nih.gov/pubmed/23577201" title="https://www.ncbi.nlm.nih.gov/pubmed/23577201" class="https">https://www.ncbi.nlm.nih.gov/pubmed/23577201</a>
 <ul>
 <li>WT = wrist skin temperature: "<b>Although the overall circadian pattern of WT was similar regardless of the masking effects, its amplitude was the rhythmic parameter most affected by environmental conditions. The acrophase and mesor were determined to be the most robust parameters for characterizing this rhythm.</b> In addition, a circadian modulation of the masking effect was found for each masking variable. WT rhythm exhibits a strong endogenous component, despite the existence of multiple external influences. This was evidenced by simultaneously eliminating the influence of activity, body position, light exposure, environmental temperature and sleep. We therefore propose that it could be considered a <b>valuable and minimally-invasive means of recording circadian physiology in ambulatory conditions</b>."</li>
 </ul>
@@ -460,6 +493,10 @@ Wearables list:<br>
 </ul>
 </li>
 <li>How to calculate dual heat flux temperature from 4 sensors: <a href="https://doi.org/10.14326/abe.7.88" title="https://doi.org/10.14326/abe.7.88" class="https">https://doi.org/10.14326/abe.7.88</a></li>
+<li><b>BEST CRITICAL METHODS: several methods of purification of core body temperature</b>, helps to better see the peaks and trough: Estimates of the daily phase and amplitude of the endogenous component of the circadian rhythm of core temperature in sedentary humans living nychthemerally, 2000 <a href="https://pubmed.ncbi.nlm.nih.gov/11543399/" title="https://pubmed.ncbi.nlm.nih.gov/11543399/" class="https">https://pubmed.ncbi.nlm.nih.gov/11543399/</a>
+<ul>
+<li>"These results reflect the masking effects exerted upon raw temperature data by lifestyle. The extent to which the purification methods enable the endogenous component of a circadian rhythm - and, by implication, the output of the endogenous circadian oscillator - to be estimated in subjects living normally is addressed."</li>
+</ul></li>
 </ul>
 </li>
 <li>Light sensor on AX6:
