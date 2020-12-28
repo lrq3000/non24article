@@ -125,14 +125,26 @@ Wearables list:<br>
 
 <h2>Wearables donning procedure</h2>
 
+<br>
+
+<h3>Actigraphy AX6</h3>
+
 <p>
 <ul>
-<li>AX6: wristwatch arrow facing outwards towards the ground on the left wrist (and the Axivity logo on the wrist facing towards the body).</li>
+<li>wristwatch arrow facing outwards towards the ground on the left wrist (and the Axivity logo on the wrist facing towards the body).</li>
+</ul>
+</p>
+
+<h3>General procedures for all wearables</h3>
+
+<p>
+<ul>
 <li>Method wearables avoid superficial skin damage:
 <ul>
-<li>Move wearable belt up or down every day and before sleeping, data quality a bit worse but it's still usable and it's necessary to avoid skin damage when worn 24/7.</li>
-<li>Use silicone micropore because can be moved and retaped, for ibuttons. </li>
-<li>Ask on reddit how to avoid skin damage when wearing a chest belt 24/7? Even medical tape without adhesives are causing same issues. Need to disinfect? With what to preserve the skin? </li>
+<li>BEST CRITICAL: Move wearable belt up or down every day and before sleeping, data quality a bit worse but it's still usable and it's necessary to avoid skin damage when worn 24/7. In practice this was found to be the most effective strategy, allowing to wear the wearables for a virtually unlimited length of time. It's also necessary to clean up the wearables with a tissue imbibed in alcohol from time to time (about once a week).</li>
+<li>Other strategies that did not work as well:
+<ul>
+<li>Good but does not allow for continuous wear and cannot be applied to all wearables: Use silicone micropore because can be moved and retaped, for ibuttons. </li>
 <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7147274/" title="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7147274/" class="https">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7147274/</a>
 <ul>
 <li>Not too much pressure, important to allow for blood circulation in the superficial skin layers.</li>
@@ -143,7 +155,6 @@ Wearables list:<br>
 </ul>
 </li>
 <li><a href="https://www.researchgate.net/publication/319008444_Understanding_Moisture-Associated_Skin_Damage_Medical_Adhesive-Related_Skin_Injuries_and_Skin_Tears" title="https://www.researchgate.net/publication/319008444_Understanding_Moisture-Associated_Skin_Damage_Medical_Adhesive-Related_Skin_Injuries_and_Skin_Tears" class="https">https://www.researchgate.net/publication/319008444_Understanding_Moisture-Associated_Skin_Damage_Medical_Adhesive-Related_Skin_Injuries_and_Skin_Tears</a></li>
-<li>Google wearing medical superficial skin damage</li>
 <li>Essayer de mettre une compresse en dessous pour absorber humidité ! </li>
 <li>Wearables change chestbelt position twice a day, at wake up and then before sleep.</li>
 <li>Ibuttons with medical tape move every 1 or 2 days to the other armpit. With the silicone micropore tape, it's possible to reuse the same tape, it will still stick because no adhesive is used, it's based on pressure.</li>
@@ -160,6 +171,15 @@ Wearables list:<br>
 </li>
 <li>Silicone does not cause allergies: <a href="https://lymed.fi/en/ufaqs/tuotteen-silikoninauha-aiheuttaa-ihoarsytysta-ja-nappyloita-onko-kyseessa-silikoniallergia-ja-miten-voi-ehkaista-sita/" title="https://lymed.fi/en/ufaqs/tuotteen-silikoninauha-aiheuttaa-ihoarsytysta-ja-nappyloita-onko-kyseessa-silikoniallergia-ja-miten-voi-ehkaista-sita/" class="https">https://lymed.fi/en/ufaqs/tuotteen-silikoninauha-aiheuttaa-ihoarsytysta-ja-nappyloita-onko-kyseessa-silikoniallergia-ja-miten-voi-ehkaista-sita/</a> "Based on literature, most of the reactions caused by silicones are non-allergic and non-specific. It is usually plain irritation, caused by skin’s properties, skin care products and hygiene – and the combination of them all. Individual elements, like pH of the skin, microbes, sweat, skin lotions and personal hygiene, can cause the irritation. Irritation can increase when sweating is more prominent – for example in higher temperatures. One can remove some of the irritation by cleaning the silicone band and the skin below it more frequently than before. The silicone band can be wiped clean several times a day. The skin below can be left lotionless."</li>
 </ul></li>
+</ul></li>
+</ul>
+</p>
+
+<h3>ECG Polar 10 and GreenTEG Core</h3>
+
+<p>
+<ul>
+<li>Attach the GreenTEG Core or the same belt as the Polar H10, on the side, just after the silicone electrode band.</li>
 </ul>
 </p>
 
@@ -309,8 +329,15 @@ Wearables list:<br>
 <li>ECG (heart rate and heart rhythm) + 3-axis trunk Accelerometer: <a href="https://github.com/polarofficial/polar-ble-sdk/blob/1d3ff05bccbd3a5ccc00731e941c73285248fa6b/technical_documentation/H10_ECG_Explained.docx" title="Polar H10" class="https">Polar H10</a>. Costs about 80€. Comes with a chest strap. Battery: 16.5 days with one button (CR2320) battery.
 <ul>
 <li>The Polar H10 sensor needs to be paired via Bluetooth to a smartphone, and an app needs to be used at all times to record the ECG (because only heart rate can be stored on the internal memory). No cloud service registration required, all data is stored locally.</li>
-<li>Use the <a href="https://play.google.com/store/apps/details?id=com.j_ware.polarsensorlogger" title="Polar Sensor Logger app on Android" class="https">Polar Sensor Logger app on Android</a> to log both the <a href="https://github.com/polarofficial/polar-ble-sdk/blob/1d3ff05bccbd3a5ccc00731e941c73285248fa6b/technical_documentation/H10_ECG_Explained.docx" title="ECG and accelerometer data" class="https">ECG and accelerometer data</a> with the sampling rate of your choice (up to 200Hz/8G for the accelerometer and 130Hz for the ECG). It also saves the Heart Rate in a separate CSV file, and the extra columns represent the RR-interval in milliseconds. The timestamp format is in nanoseconds and the epoch is 1.1.2000. Note that the app only requires bluetooth, hence to save battery, the phone can be set to Plane mode and location can be disabled, everything can be disabled except bluetooth, and the screen can be turned off during data collection. Data is stored in realtime in csv files in the sensorDataLogs folder at the device's root, so that even if the logging is interrupted due to a bug or the device being out of battery, the last logging session won't be lost.
+<li>Use the <a href="https://play.google.com/store/apps/details?id=com.j_ware.polarsensorlogger" title="Polar Sensor Logger app on Android" class="https">Polar Sensor Logger app on Android</a> by Jukka Happonen to log both the <a href="https://github.com/polarofficial/polar-ble-sdk/blob/1d3ff05bccbd3a5ccc00731e941c73285248fa6b/technical_documentation/H10_ECG_Explained.docx" title="ECG and accelerometer data" class="https">ECG and accelerometer data</a> with the sampling rate of your choice (up to 200Hz/8G for the accelerometer and 130Hz for the ECG). It also saves the Heart Rate in a separate CSV file, and the extra columns represent the RR-interval in milliseconds. The timestamp format is in nanoseconds and the epoch is 1.1.2000. Note that the app requires both bluetooth and location (GPS), hence to save battery, the phone can be set to Plane mode and wi-fi can be disabled, everything can be disabled except bluetooth and location, and the screen can be turned off during data collection. Data is stored in realtime in csv files in the sensorDataLogs folder at the device's root, so that even if the logging is interrupted due to a bug or the device being out of battery, the last logging session won't be lost.
 <ul>
+<li>Note that although the app can work with only bluetooth, it won't be able to seek and automatically reconnect to the Polar H10 sensor in case of disconnection without location (GPS) enabled.</li>
+<li>Also to ensure automatic reconnection, it's necessary to enable the dual Bluetooth stream/pairing on the Polar H10 after each change of battery (the memory is flushed then) using the official Polar Beats app. Note that this app requires enabling wi-fi temporarily (in addition to Bluetooth and GPS location) to pair with the Polar H10. This can be a good opportunity to also disable GymLink and ANT+ to extend the H10's battery life.
+<ul>
+<li>Here are the steps to do every time the battery of Polar H10 is changed: 1- restart phone (to free up connection slots), 2- launch Polar Beats app (requires WiFi to access the settings) and in the settings tap on the entry Receptor: Polar H10 and then enable dual receivers (ie, allows multiple devices to connect to Polar H10, this is necessary as otherwise when the data logger auto-reconnects, the Polar H10 may refuse the connection thinking the previous connection is still alive), 3- disable ANT+ and GymLink (to save battery, 4- Launch Polar Sensor Logger, enable ECG and ACC, connect, set 100Hz/4G (or a higher data collection rate for accelerometer), then click on Graph, activate all graphs, check that everything is alright and you can see your ECG, then pause the graph to save battery and leave Polar Sensor Logger in the forefront (don't multitask with another app as otherwise it will likely get killed).</li>
+</ul>
+</li>
+<li>Always maintain phone battery above 20% otherwise app will likely get killed to save battery whatever the battery saving settings </li>
 <li>It might be a good idea to buy a dedicated <a href="https://www.gsmarena.com/battery-test.php3" title="Android phone with a long battery" class="https">Android phone with a long battery</a>, which can allow to continuously record up to 10 days with a single charge (the generated data with accelerometer set to 100Hz and 2G is 400KB/min total for accelerometer+ECG+Heart Rate, so this makes for 6GB for 10 days, or 17GB/month, or 200GB/year of data, so it all fits in any modern smartphone's internal memory).
 <ul>
 <li>Using as a bluetooth receiver the <b>Realme 6i and its 5000mAh battery</b> (cost about 170 euros), the <b>battery consumption rate is 10%/24h, hence up to 9-10 days can be acquired with one full charge</b>.</li>
@@ -335,8 +362,10 @@ Wearables list:<br>
 <li>Using the Polar Beat app, the H10 sensor can be configured to have a dual Bluetooth stream, so that it can send data to two different devices/apps simultaneously. This can be used advantageously to concurrently continuously record the ECG data on one device, and use another device (the day-to-day smartphone) for when you want to visualize your current heart rhythm in real-time. To do this, install the Polar Beat app, pair the sensor, then go to the settings, click on the sensor and the sensor's options will show up, and then you can enable the "2 BLE receptors" option.
 <ul>
 <li>Using the Polar Beat app, <a href="https://support.polar.com/en/support/How_to_make_the_most_out_of_H6_and_H7_sensor" title="disable GymLink and ANT+ to significantly increase battery duration" class="https">disable GymLink and ANT+ to significantly increase battery duration</a>.</li>
+<li>It's necessary to enable the dual Bluetooth stream to ensure auto-reconnection by the Polar Sensor Logger app.</li>
 </ul>
 </li>
+<li>This app is made by an employee of Polar (although this is not an official Polar app), so that it likely has a very robust and clean implementation respecting the Polar API.</li>
 <li>Combined with the EliteHRV Android and iOS app, the Polar H10 can be used for breathing relaxation exercises (fundamental resonance breathing etc), and also be used as a biofeedback tool.</li>
 <li>Big advantage of this setup compared to others: it really allows for continuous ECG, since there is no need to transfer data to restart a new session, as the phone's memory is used and it's vast. So only the smartphone's battery is the limitation, but it can be recharged while the acquisition continues, and even the data can be transferred concurrently using FTP or similar apps. This is a true 24/7 continuous ECG monitoring setup.</li>
 <li>Higher-grade alternatives (but with much shorter battery or storage space):
