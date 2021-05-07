@@ -1,3 +1,5 @@
+# This project has moved to [https://github.com/Circadiaware/VLiDACMel-entrainment-therapy-non24](https://github.com/Circadiaware/VLiDACMel-entrainment-therapy-non24).
+
 # non24article
 Work-in-progress draft of a protocol to entrain the Non 24 circadian rhythm disorder.
 
